@@ -1,0 +1,66 @@
+#Get the extra buffs from the danmaku modifiers
+#type
+#skill_boni
+#variable - the output
+# th_character_skill_{{id}} = {
+# 	set_variable = {#set a default
+# 		which = $variable$
+# 		value = 0
+# 	}
+# 	if = {
+# 		limit = {
+# 			exists = {{tag}}
+# 		}
+# 		{{tag}} = {
+# 			th_getruler_fighting_skill = {
+# 				skill_boni = $skill_boni$
+# 				type = $type$
+# 			}
+#             th_danmaku_set_compare_variable = {
+#                 type = $type$
+#             }
+#             th_export_root_variable_into_foreign = {
+#                 who = PREV
+#                 root_variable = th_current_fighting_skills_counter
+#                 foreign_variable = $variable$
+#             }
+# 		}
+# 	}#TODO other cases
+# 	else = {
+# 		set_variable = {
+# 			which = $variable$
+# 			value = {{danmaku_power}}
+# 		}
+# 	}
+# }
+th_character_skill_rumia = {
+	set_variable = {#set a default
+		which = $variable$
+		value = 0
+	}
+	if = {
+		limit = {
+			exists = ROD
+		}
+		ROD = {
+			th_getruler_fighting_skill = {
+				skill_boni = $skill_boni$
+				type = $type$
+			}
+            th_danmaku_set_compare_variable = {
+                type = $type$
+            }
+            th_export_root_variable_into_foreign = {
+                who = PREV
+                root_variable = th_current_fighting_skills_counter
+                foreign_variable = $variable$
+            }
+		}
+	}#TODO other cases
+	else = {
+		set_variable = {
+			which = $variable$
+			value = 950
+		}
+	}
+}

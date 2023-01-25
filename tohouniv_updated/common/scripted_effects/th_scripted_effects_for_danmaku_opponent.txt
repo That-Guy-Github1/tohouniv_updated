@@ -64,3 +64,74 @@ th_character_skill_rumia = {
 		}
 	}
 }
+
+# th_initiate_danmaku_fight_against_{{id}} = {
+# 	if = {
+# 		limit = {
+# 			exists = {{tag}}
+# 		}
+# 		{{tag}} = {
+# 			clr_country_flag = th_was_already_danmaku_challenged_by_@ROOT
+#             clr_country_flag = th_danmaku_duel_lost_against_@FROM
+# 			[[normal]] = {
+# 				country_event = {
+# 					id = th_diplo_events.23
+# 					days = 1
+# 				}
+# 			}
+# 			[[incident]] = {
+# 				country_event = {
+# 					id = th_incidents_event.30
+# 					days = 1
+# 				}
+# 			}
+# 			if = {
+# 				limit = { NOT = { has_country_flag = th_has_danmaku_decline_counter } }
+# 				set_country_flag = th_has_danmaku_decline_counter
+# 				set_variable = {
+# 					which = th_declined_danmaku_duel_counter
+# 					value = 0
+# 				}
+# 			}
+# 		}
+# 	}
+# 	else = {
+# 		th_danmaku_incident_fight_ruler_and_opponent = yes
+# 	}
+# }
+
+th_initiate_danmaku_fight_against_rumia = {
+	if = {
+		limit = {
+			exists = ROD
+		}
+		save_event_target_as = investigator_tag
+		ROD = {
+			clr_country_flag = th_was_already_danmaku_challenged_by_@ROOT
+            clr_country_flag = th_danmaku_duel_lost_against_@FROM
+			[[normal]] = {
+				country_event = {
+					id = th_diplo_events.23
+					days = 1
+				}
+			}
+			[[incident]] = {
+				country_event = {
+					id = th_incidents_event.30
+					days = 1
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = th_has_danmaku_decline_counter } }
+				set_country_flag = th_has_danmaku_decline_counter
+				set_variable = {
+					which = th_declined_danmaku_duel_counter
+					value = 0
+				}
+			}
+		}
+	}
+	else = {
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+	}
+}

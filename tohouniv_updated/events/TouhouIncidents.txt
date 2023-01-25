@@ -424,3 +424,130 @@ country_event = {
 		custom_tooltip = th_incidents_event.28.a.tt
 	}
 }
+
+country_event = {
+	id = th_incidents_event.31
+	title = "th_incidents_event.31.t"
+	desc = "th_incidents_event.31.desc"
+	picture = YUKARI_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+            set_country_flag = th_was_already_danmaku_challenged_by_@FROM
+			set_variable = {
+				which = th_current_fighting_skills_incident
+				which = investigator_tag:th_SDM_inci_rumias_combat_skills
+			}
+		}
+	}
+    
+    #BRING IT ON
+    option = {
+        name = th_diplo_events.31.a
+        custom_tooltip = th_diplo_events.31.a.tt
+        event_target:investigator_tag = {
+            country_event = {
+                id = th_diplo_events.32
+                days = 3
+            }
+            #hidden_effect = {
+            #    add_country_modifier = {
+            #        name = th_was_in_danmaku_duel
+            #        duration = 1095
+            #        hidden = yes
+            #    }
+            #}
+        }
+
+        ai_chance = {
+            factor = 0.20
+            modifier = {
+                factor = 4
+                mil = FROM
+            }
+        }
+    }
+
+    #I don't have time for games   
+    option = {
+        name = th_diplo_events.31.b
+		event_target:investigator_tag = {
+            country_event = {
+                id = th_diplo_events.33
+                days = 3
+            }
+        }
+        ai_chance = {
+            factor = 0.75
+            modifier = {
+                factor = 0.33
+                mil = FROM
+            }
+        }
+    }
+}
+#Danmaku Duel - Danmaku fight
+country_event = {
+	id = th_diplo_events.32
+	title = th_diplo_events.32.t
+	desc = th_diplo_events.32.desc
+	picture = REIMUMARISABATTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	#TAKE THIS
+		name = th_diplo_events.32.a
+		custom_tooltip = th_diplo_events.32.a.tt
+        highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		hidden_effect = {
+            FROM = {
+                set_country_flag = th_danmaku_duel_target_for_@ROOT
+            }
+		}
+
+		ai_chance = { 
+			factor = 1
+		}
+    }
+    
+    # option = {  #Can't back out in an incident
+    #     name = th_diplo_events.32.b
+    #     add_power_projection = {
+    #         type = th_has_declined_danmaku_duel
+    #         amount = -5
+    #     }
+    #     FROM = {
+    #         country_event = {
+    #             id = th_diplo_events.30
+    #         }
+    #     }
+
+	# 	ai_chance = { 
+	# 		factor = 0
+	# 	}
+    # }
+}
+
+#Danmaku Duel - Target declines duel
+country_event = {
+	id = th_diplo_events.33
+	title = th_diplo_events.33.t
+	desc = th_diplo_events.33.desc
+	picture = REIMUMARISABATTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+        name = th_diplo_events.25.a
+		th_incident_change_points = {
+			value = 2
+		}
+
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}

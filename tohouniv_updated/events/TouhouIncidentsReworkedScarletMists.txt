@@ -294,7 +294,7 @@ country_event = {
 		name = "th_scarlet_mists_incident_events.2.a"
 		custom_tooltip = th_scarlet_mists_incident_events.2.a.tt
 		highlight = yes
-		th_danmaku_incident_fight_ruler_and_opponent = yes
+		th_initiate_danmaku_fight_against_rumia = { incident = yes }
 		
 		ai_chance = { 
 			factor = 40 

@@ -13,6 +13,7 @@ country_event = {
 	picture = HIGAN_eventPicture
 
 	trigger = {
+		always = no ### Old Incident, to be removed eventually.
 		th_incident_check_year_for_incident = { incident = sixty_year_cycle_incident year = 1525 }
 		NOT = { th_incident_has_been_resolved = { incident = sixty_year_cycle_incident } }
 		th_does_not_have_current_incident = { incident = sixty_year_cycle_incident }

@@ -13,6 +13,7 @@ country_event = {
 	picture = MOUNTAINOFFAITH_eventPicture
 
 	trigger = {
+		always = no ### Old Incident, to be removed eventually.
 		th_incident_check_year_for_incident = { incident = mountain_of_faith_incident year = 1525 }
 		NOT = { th_incident_has_been_resolved = { incident = mountain_of_faith_incident } }
 		th_incident_can_trigger_generic_check = yes

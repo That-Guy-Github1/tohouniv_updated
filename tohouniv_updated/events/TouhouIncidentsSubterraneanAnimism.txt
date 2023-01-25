@@ -13,6 +13,7 @@ country_event = {
 	picture = UNDERGROUND_eventPicture
 
 	trigger = {
+		always = no ### Old Incident, to be removed eventually.
 		th_incident_check_year_for_incident = { incident = subterranean_animism_incident year = 1550 }
 		NOT = { th_incident_has_been_resolved = { incident = subterranean_animism_incident } }
 		th_incident_can_trigger_generic_check = yes

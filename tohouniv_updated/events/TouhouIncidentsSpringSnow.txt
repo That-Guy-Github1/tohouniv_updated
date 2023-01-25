@@ -13,6 +13,7 @@ country_event = {
 	picture = SNOWSPRING_eventPicture
 
 	trigger = {
+		always = no ### Old Incident, to be removed eventually.
 		th_incident_check_year_for_incident = { incident = spring_snow_incident year = 1475 }
 		NOT = { th_incident_has_been_resolved = { incident = spring_snow_incident } }
 		th_incident_can_trigger_generic_check = yes

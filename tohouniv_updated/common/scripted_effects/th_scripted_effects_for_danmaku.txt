@@ -3,12 +3,10 @@ th_additional_danmaku_buff = {
 	export_to_variable = {
 		variable_name = th_additional_danmaku_power
 		value = modifier:danmaku_power_constant
-		who = ROOT
 	}
 	export_to_variable = {
 		variable_name = th_danmaku_power_modifier
 		value = modifier:danmaku_power_factor
-		who = ROOT
 	}
 	change_variable = {
 		which = th_danmaku_power_modifier
@@ -56,22 +54,18 @@ th_getruler_fighting_skill = {
 	export_to_variable = {
 		variable_name = th_current_military_skill
 		value = MIL
-		who = ROOT
 	}
 	#export_to_variable = {
 	#	variable_name = th_current_army_tradition_skill
 	#	value = army_tradition
-	#	who = ROOT
 	#}
 	#export_to_variable = {
 	#	variable_name = th_current_religious_unity_skill
 	#	value = religious_unity
-	#	who = ROOT
 	#}
 	export_to_variable = {
 		variable_name = th_current_tolerance_to_the_true_faith_skill
 		value = modifier:tolerance_own
-		who = ROOT
 	}
 
 	multiply_variable = {
@@ -132,22 +126,18 @@ th_getruler_diplomatic_skill = {
 	export_to_variable = {
 		variable_name = th_current_diplomatic_skill
 		value = DIP
-		who = ROOT
 	}
 	export_to_variable = {
 		variable_name = th_current_prestige_skill
 		value = prestige
-		who = ROOT
 	}
 	export_to_variable = {
 		variable_name = th_current_repuation_skill
 		value = modifier:diplomatic_reputation
-		who = ROOT
 	}
 	export_to_variable = {
 		variable_name = th_current_subjects_skill
 		value = trigger_value:num_of_subjects
-		who = ROOT
 	}
 
 	multiply_variable = {
@@ -209,17 +199,14 @@ th_getruler_fighting_skill_no_mil = {
 	#export_to_variable = {
 	#	variable_name = th_current_army_tradition_skill
 	#	value = army_tradition
-	#	who = ROOT
 	#}
 	#export_to_variable = {
 	#	variable_name = th_current_religious_unity_skill
 	#	value = religious_unity
-	#	who = ROOT
 	#}
 	export_to_variable = {
 		variable_name = th_current_tolerance_to_the_true_faith_skill
 		value = modifier:tolerance_own
-		who = ROOT
 	}
 	
 	#multiply_variable = {

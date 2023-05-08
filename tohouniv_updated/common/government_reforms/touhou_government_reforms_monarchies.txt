@@ -871,7 +871,9 @@ Gensokyan_kmj_travelling_kingdom = {
 		disables_settled_property = yes
 		enables_claim_immunity = yes
 		disables_subject_annexation = yes
+		kmj_government_mechanic = yes
 	}
+	government_abilities = { th_koishi_wandering_realm }
 }
 
 Gensokyan_fom_witch_government = {

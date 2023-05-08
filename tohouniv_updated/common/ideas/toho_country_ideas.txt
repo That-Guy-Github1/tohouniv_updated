@@ -2627,7 +2627,7 @@ KMJ_ideas = {
 	}
 	KMJ_Wandering_state = {
 		fabricate_claims_cost = -0.5
-		development_cost = -0.1
+		envoy_travel_time = -0.5
 	}
 	KMJ_Pointlessness_in_money = {
 		yearly_corruption = -0.1

@@ -41,4 +41,23 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	
+	spriteType = {
+		name = "GFX_kmj_shadow_city"
+		texturefile = "gfx/interface/government_mechanics/th_koishi_wandering_realm/kmj_shadow_city.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_kmj_subconscious_manipulation"
+		texturefile = "gfx/interface/government_mechanics/th_koishi_wandering_realm/kmj_subconscious_manipulation.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_kmj_phone_call"
+		texturefile = "gfx/interface/government_mechanics/th_koishi_wandering_realm/kmj_phone_call.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
 }

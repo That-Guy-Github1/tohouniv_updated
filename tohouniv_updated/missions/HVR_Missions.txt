@@ -1673,12 +1673,18 @@ hvr_slot3_branch = {
 		required_missions = { HVR_thunder_of_perun HVR_wrath_of_zeus HVR_glory_of_odin }
 		provinces_to_highlight = {  } 
 
-		trigger = { is_hegemon = yes } 
+		trigger = { } 
 
 		effect = { 
-			country_event = {
-				id = flavor_hvr.20
-			}	
+			hidden_effect = {
+				set_country_flag = hvr_stairway_to_heaven_flag
+				swap_non_generic_missions = yes
+			}
+			custom_tooltip = hvr_stairway_to_heaven_ct
+			add_country_modifier = {
+				name = hvr_stairway_to_heaven_modifier
+				duration = -1
+			}
 		} 
 	}
 }
@@ -2530,4 +2536,90 @@ hvr_slot5_branch = {
 			}
 		} 
 	}
+}
+
+hvr_stairway_to_heaven_branch = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		has_country_flag = hvr_stairway_to_heaven_flag
+		th_is_or_was_tag = {tag = HVR}
+	}
+	has_country_shield = yes
+	
+	HVR_judgement_day = {
+		icon = mission_tenshi_judgement_day
+		position = 16
+		required_missions = { HVR_stairway_to_heaven }
+		provinces_to_highlight = { 
+			OR = {
+				superregion = europe_superregion 
+				superregion = eastern_europe_superregion
+				province_id = 118
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 100
+				OR = {
+					superregion = europe_superregion 
+					superregion = eastern_europe_superregion
+				}
+				is_city = yes
+			}
+			118 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  
+			country_event = {
+				id = flavor_hvr.20
+			}
+
+		} 
+	}
+
+	HVR_angel_of_apocalypse = {
+		icon = mission_angel_of_apocalypse
+		position = 17
+		required_missions = { HVR_judgement_day }
+		provinces_to_highlight = { 
+			OR = {
+				superregion = europe_superregion 
+				superregion = eastern_europe_superregion
+				province_id = 118
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = { 
+			is_hegemon = yes
+			OR = {
+				calc_true_if = {
+					all_country = {
+						religion = ROOT
+					}
+					amount = 50
+				}
+				calc_true_if = {
+					all_province = {
+						religion = ROOT
+					}
+					amount = 600
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = HVR_angel_of_apocalypse_ct
+			hidden_effect = {
+				set_country_flag = hvr_angel_of_apocalypse
+			}
+		} 
+	}
+
 }

@@ -23,6 +23,7 @@ country_event = {  ### Start of the rebellion
 	#Tenshi has arrived
 	option = {
 		name = th_return_of_tenshi.1.a
+		custom_tooltip = th_return_of_tenshi.1.a.ct
 		ai_chance = {
 			factor = 100
 		}

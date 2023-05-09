@@ -118,7 +118,7 @@ country_event = {   #Taking over Hell - how to deal with territories that we got
 country_event = {   #Release Shion from Reimu
 	id = flavor_hvr.4
 	title = flavor_hvr.4.t
-	picture = NITORI_GADGET_eventPicture
+	picture = SHION_eventPicture
 	desc = flavor_hvr.4.desc
 	is_triggered_only = yes
 
@@ -175,8 +175,8 @@ country_event = {   #Release Shion from Reimu
 					add_adm_power = 112
 					add_dip_power = 112
 					add_mil_power = 112
-					add_manpower = 9
-					add_treasury = 125
+					add_manpower = 20
+					add_treasury = 300
 					add_prestige = 15
 					set_capital = 5041	
 					change_estate_land_share = {
@@ -231,7 +231,7 @@ country_event = {   #Release Shion from Reimu
 country_event = {   #Release Greece vassal
 	id = flavor_hvr.5
 	title = flavor_hvr.5.t
-	picture = NITORI_GADGET_eventPicture
+	picture = GREEKTEMPLE_eventPicture
 	desc = flavor_hvr.5.desc
 	is_triggered_only = yes
 
@@ -375,7 +375,7 @@ country_event = {   #Release Greece vassal
 country_event = {   #Offer for Lunarians to make PU
 	id = flavor_hvr.6
 	title = flavor_hvr.6.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_eventPicture
 	desc = flavor_hvr.6.desc
 	is_triggered_only = yes
 
@@ -415,7 +415,7 @@ country_event = {   #Offer for Lunarians to make PU
 country_event = {   #Offer accepted
 	id = flavor_hvr.7
 	title = flavor_hvr.7.t
-	picture = NITORI_GADGET_eventPicture
+	picture = LUNAR_DIPLOMACY_eventPicture
 	desc = flavor_hvr.7.desc
 	is_triggered_only = yes
 
@@ -432,7 +432,7 @@ country_event = {   #Offer accepted
 country_event = {   #Offer declined, receive claims
 	id = flavor_hvr.8
 	title = flavor_hvr.8.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TOYOHIME2_eventPicture
 	desc = flavor_hvr.8.desc
 	is_triggered_only = yes
 
@@ -459,7 +459,7 @@ country_event = {   #Offer declined, receive claims
 country_event = {   #Yorihime teaches Iku 
 	id = flavor_hvr.9
 	title = flavor_hvr.9.t
-	picture = NITORI_GADGET_eventPicture
+	picture = YORIHIME_TENSHI_eventPicture
 	desc = flavor_hvr.9.desc
 	is_triggered_only = yes
 
@@ -476,7 +476,7 @@ country_event = {   #Yorihime teaches Iku
 country_event = {   #New weather control!
 	id = flavor_hvr.10
 	title = flavor_hvr.10.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_earthquake_eventPicture
 	desc = flavor_hvr.10.desc
 	is_triggered_only = yes
 
@@ -492,7 +492,7 @@ country_event = {   #New weather control!
 country_event = {   #Learn from Suwako
 	id = flavor_hvr.11
 	title = flavor_hvr.11.t
-	picture = NITORI_GADGET_eventPicture
+	picture = MORIYABOSS_eventPicture
 	desc = flavor_hvr.11.desc
 	is_triggered_only = yes
 
@@ -820,7 +820,7 @@ country_event = {   #Release Novgorod vassal
     }
 }
 
-country_event = {   #Stairway to Heaven
+country_event = {   #judgement day
 	id = flavor_hvr.20
 	title = flavor_hvr.20.t
 	picture = NITORI_GADGET_eventPicture
@@ -829,10 +829,26 @@ country_event = {   #Stairway to Heaven
 
 	option = {	
 	name = flavor_hvr.20.a
-		add_country_modifier = {
-			name = hvr_stairway_to_heaven_modifier
-			duration = -1
-		}
+	custom_tooltip = hvr_convert_them_tt
+	add_country_modifier = {
+		name = hvr_judgement_day_modifier
+		duration = -1
+	}
+	hidden_effect = {
+		every_country = {
+			limit = {
+				OR = {
+					religion = catholic
+					religion = orthodox
+					religion = protestant
+					religion = reformed
+					religion = anglican
+					religion = hussite
+				} 
+			}
+			country_event = { id = flavor_hvr.43 }
+		}	
+	}
 	}
 }
 
@@ -1886,6 +1902,40 @@ country_event = {   #Open up Resort
  	}		 
 }
 
+country_event = {   #### Convert everyone to our religion
+	id = flavor_hvr.43
+	title = flavor_hvr.43.t
+	picture = NITORI_GADGET_eventPicture
+	desc = flavor_hvr.20.desc
+	is_triggered_only = yes
+
+	name = flavor_hvr.43.a
+		option = {
+			name = flavor_hvr.43.a
+			ai_chance = {
+				factor = 50
+			}
+			change_religion = th_taoist
+			capital_scope = {
+				if = {
+					limit = {
+						NOT = { religion = th_taoist }
+					}
+					change_religion = th_taoist
+				}
+			}
+			add_stability = -1
+			add_prestige = 25
+		}
+
+		option = {
+			name = flavor_hvr.43.b
+			ai_chance = {
+				factor = 50
+			}
+			add_stability = -3
+		}
+}
 
 
 
@@ -1929,9 +1979,26 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 			limit = {
 				has_country_flag = hvr_tenshi_is_back
 				NOT = { has_country_modifier = hvr_heavy_rain}
+				NOT = { has_country_flag = hvr_angel_of_apocalypse}
 			}
 			add_country_modifier = {
 				name = hvr_heavy_rain
+				duration = 3650
+			}
+			change_variable = {
+				which = hvr_weather_action_counter
+				value = 1
+			}
+			add_dip_power = -100
+		}
+		else_if = {
+			limit = {
+				NOT = { has_country_modifier = hvr_heavy_rain}
+				NOT = { has_country_modifier = hvr_heavy_rain_lvl_2}
+				has_country_flag = hvr_angel_of_apocalypse
+			}
+			add_country_modifier = {
+				name = hvr_heavy_rain_lvl_2
 				duration = 3650
 			}
 			change_variable = {
@@ -1949,6 +2016,7 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 			limit = {
 				has_country_flag =  hvr_learned_from_suwako
 				NOT = { has_country_modifier = hvr_terraforming }
+				NOT = { has_country_flag = hvr_angel_of_apocalypse}
 			}
 			add_country_modifier = {
 				name = hvr_terraforming 
@@ -1977,6 +2045,37 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 		}
 		else_if = {
 			limit = {
+				NOT = { has_country_modifier = hvr_terraforming }
+				NOT = { has_country_modifier = hvr_terraforming_lvl_2 }
+				has_country_flag = hvr_angel_of_apocalypse
+			}
+			add_country_modifier = {
+				name = hvr_terraforming_lvl_2 
+				duration = 3650
+			}
+			change_variable = {
+				which = hvr_weather_action_counter
+				value = 1
+			}
+			random_owned_province = {
+				limit = {
+					is_state_core = root
+					area_for_scope_province = {
+						is_capital_of = root
+					}
+				}
+				random_list = {
+					33 = { add_base_tax = 3 } 
+					33 = { add_base_manpower = 3 } 
+					33 = { add_base_production = 3 } 
+				}
+			}
+			add_adm_power = -66
+			add_mil_power = -66
+			add_dip_power = -66
+		}
+		else_if = {
+			limit = {
 				NOT = { has_country_flag = hvr_learned_from_suwako }
 			}
 			custom_tooltip = flavor_hvr.101.b.ct
@@ -1990,6 +2089,7 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 			limit = {
 				has_country_flag = hvr_yorihime_weather_control 
 				NOT = { has_country_modifier = hvr_experiment_with_electricity }
+				NOT = { has_country_flag = hvr_angel_of_apocalypse}
 			}
 			add_country_modifier = {
 				name = hvr_experiment_with_electricity
@@ -2010,6 +2110,29 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 		}
 		else_if = {
 			limit = {
+				NOT = { has_country_modifier = hvr_experiment_with_electricity }
+				NOT = { has_country_modifier = hvr_experiment_with_electricity_lvl_2 }
+				has_country_flag = hvr_angel_of_apocalypse
+			}
+			add_country_modifier = {
+				name = hvr_experiment_with_electricity_lvl_2
+				duration = 3650
+			}
+			change_variable = {
+				which = hvr_weather_action_counter
+				value = 1
+			}
+			random_list = {
+				33 = { change_innovativeness = 3 } 
+				33 = { change_innovativeness = 5 } 
+				33 = { change_innovativeness = 10 } 
+			}
+			add_adm_power = -75
+			add_dip_power = -75
+			add_dip_power = -75
+		}
+		else_if = {
+			limit = {
 				NOT = { has_country_flag = hvr_yorihime_weather_control }
 			}
 			custom_tooltip = flavor_hvr.101.d.ct
@@ -2023,9 +2146,29 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 		limit = {
 			has_country_flag = hvr_weather_control_lvl_3
 			NOT = { has_country_modifier = hvr_rainbow }
+			NOT = { has_country_flag = hvr_angel_of_apocalypse}
 		}
 		add_country_modifier = {
 			name = hvr_rainbow
+			duration = 2555 #7 years
+		}
+		change_variable = {
+			which = hvr_weather_action_counter
+			value = 1
+		}
+		add_adm_power = -50
+		add_dip_power = -50
+		add_prestige = 5
+	}
+	else_if = {
+		limit = {
+			has_country_flag = hvr_weather_control_lvl_3
+			NOT = { has_country_modifier = hvr_rainbow }
+			NOT = { has_country_modifier = hvr_rainbow_lvl_2 }
+			has_country_flag = hvr_angel_of_apocalypse
+		}
+		add_country_modifier = {
+			name = hvr_rainbow_lvl_2
 			duration = 2555 #7 years
 		}
 		change_variable = {
@@ -2212,6 +2355,24 @@ country_event = {  # Rainbow on target
 		name = flavor_hvr.109.a
 			add_country_modifier = {
 				name = hvr_rainbow 
+				duration = 1850
+			}
+	}
+}
+
+country_event = {  # Armageddon
+	id = flavor_hvr.110
+	title = flavor_hvr.110.t
+	picture = TENSHI_ARMAGEDDON_eventPicture
+	desc = flavor_hvr.110.desc
+	is_triggered_only = yes
+
+	
+	option = { 
+		name = flavor_hvr.110.a
+			add_stability = -3
+			add_country_modifier = {
+				name = hvr_armageddon 
 				duration = 1850
 			}
 	}

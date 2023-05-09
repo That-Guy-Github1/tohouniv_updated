@@ -1669,6 +1669,11 @@ jnk_grace_of_goddess_of_vengeance = {
 
 #Heavenly Realm event modifiers
 
+hvr_judgement_day_modifier = {
+	missionaries = 2
+	global_missionary_strength = 0.06
+}
+
 hvr_disloyal_nobles = {
 	nobles_loyalty_modifier = -0.2
 }
@@ -1844,6 +1849,10 @@ hvr_heavy_rain = {   #DEFAULT
 	global_trade_goods_size_modifier = 0.15 
 }
 
+hvr_heavy_rain_lvl_2 = {  #Unlocked at the end of MT
+	global_trade_goods_size_modifier = 0.25 
+}
+
 hvr_disperse_clouds = {    #DEFAULT
 	global_supply_limit_modifier = -0.25
 	global_trade_goods_size_modifier = -0.1
@@ -1858,6 +1867,10 @@ hvr_terraforming = {            #UNLOCKED on mission hvr_learn_from_suwako
 	development_cost = -0.1
 }
 
+hvr_terraforming_lvl_2 = {      #Unlocked at the end of MT      
+	development_cost = -0.2
+}
+
 hvr_thunderstorm = {			#UNLOCKED on mission hvr_dragon_god
 	ship_durability = -0.1
 }
@@ -1866,6 +1879,12 @@ hvr_experiment_with_electricity = {			#UNLOCKED on mission hvr_dragon_god
 	technology_cost = -0.05
 	idea_cost = -0.05
 }
+
+hvr_experiment_with_electricity_lvl_2 = {			#Unlocked at the end of MT 
+	technology_cost = -0.2
+	idea_cost = -0.2
+}
+
 
 hvr_hurricane = {							#UNLOCKED on mission hvr_mastery_over_nature
 	global_monthly_devastation = 0.1
@@ -1877,8 +1896,17 @@ hvr_rainbow = {								#UNLOCKED on mission hvr_mastery_over_nature
 	global_unrest = -2
 }
 
+hvr_rainbow_lvl_2 = {								#UNLOCKED at the end of MT
+	years_of_nationalism = -10
+	global_unrest = -3
+}
+
 hvr_meteorite = {						#UNLOCKED on mission hvr_learn_from_suwako
 	development_cost = 0.05
+}
+
+hvr_armageddon = {
+	global_unrest = 10
 }
 
 lcu_sacred_ceremony_modifier = {

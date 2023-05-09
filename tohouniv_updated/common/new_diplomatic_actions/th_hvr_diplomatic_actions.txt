@@ -313,3 +313,43 @@ th_hvr_weather_control_rainbow = {   ### Rainbow
 		always = no
 	}
 }
+
+th_hvr_weather_control_armageddon = {   ### Armageddon
+
+
+	category = th_diplo_action
+
+	require_acceptance = no
+
+	is_visible = {
+		has_country_flag = hvr_angel_of_apocalypse
+	}
+
+	is_allowed = {
+		NOT = { FROM = { has_country_modifier = hvr_armageddon } }		
+	}
+
+	on_accept = {
+		FROM = {
+			change_variable = {
+				which = hvr_weather_action_counter
+				value = 1
+			}
+			country_event = {  
+				id = flavor_hvr.110
+			}
+			add_trust = {
+				who = ROOT
+				value = -20
+			}
+			add_opinion = {
+				modifier = th_hvr_used_hvr_armageddon
+				who = ROOT
+			}
+		}
+		add_stability = -1
+	}
+	ai_will_do = {
+		always = no
+	}
+}

@@ -1804,6 +1804,16 @@ spriteTypes = {
 		name = "mission_touhou_seiran"
 		texturefile = "gfx//interface//missions//touhou_missions//mission_touhou_seiran.dds"
 	}
+
+	spriteType = {
+		name = "mission_tenshi_judgement_day"
+		texturefile = "gfx//interface//missions//touhou_missions//mission_tenshi_judgement_day.dds"
+	}
+
+	spriteType = {
+		name = "mission_angel_of_apocalypse"
+		texturefile = "gfx//interface//missions//touhou_missions//mission_angel_of_apocalypse.dds"
+	}
 }
 
 

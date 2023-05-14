@@ -281,6 +281,13 @@ lcu_slot1_branch = {
 
 		effect = {
 			country_event = { id = flavor_lcu.3 }
+			hidden_effect = {
+				EIT = {
+					country_event = {
+						id = flavor_lcu.102
+					}
+				}
+			}
 			netherworld_region = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -448,6 +455,20 @@ lcu_slot1_branch = {
 		}
 
 		effect = {
+			custom_tooltip = lcu_humiliate_invaders_ct
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion_group = Touhou
+					}
+					add_aggressive_expansion = {
+						who = LCU
+						value = -500
+						apply_calc = no 
+					}
+				 }
+			}
+
 			country_event = { id = flavor_lcu.16 }											
 	    }  
     }
@@ -681,11 +702,15 @@ lcu_slot2_branch = {
 					religion = ROOT
 					culture = ROOT
 				}
-				amount = 50
+				amount = 75
 			}
 			religion = th_lunarian_religion
 		}
 		effect = {
+			add_country_modifier = {
+				name = lcu_purified_gensokyo_modifier
+				duration = -1
+			}
 			if = {
 				limit = {
 					has_dlc = "Common Sense"
@@ -937,6 +962,10 @@ lcu_slot3_branch = {
 		}
 
 		effect = {
+			add_country_modifier = {
+				name = lcu_world_dominance_modifier
+				duration = -1
+			}
 			if = { 
 				limit = { has_had_golden_age = yes }
 				reset_golden_age = yes 
@@ -1135,7 +1164,7 @@ lcu_slot4_branch = {
 			add_adm_power = 50
 			add_dip_power = 50
 			add_mil_power = 50
-			change_innovativeness = 5
+			change_innovativeness = 10
 		}
 	}
 
@@ -1237,6 +1266,15 @@ lcu_slot4_branch = {
 			calc_true_if = {
 				all_province = {
 					continent = europe
+					trade_goods = wine
+					religion = ROOT
+					culture = ROOT
+				}
+				amount = 10
+			}
+			calc_true_if = {
+				all_province = {
+					continent = europe
 					religion = ROOT
 					culture = ROOT
 				}
@@ -1244,6 +1282,10 @@ lcu_slot4_branch = {
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = lcu_purified_europe_modifier
+				duration = -1
+			}
 			country_event = { id = flavor_lcu.15 }	
 		}
 	}
@@ -1654,6 +1696,9 @@ lcu_slot5_branch = {
 				province_id = 118
 				province_id = 134
 				province_id = 50
+				province_id = 266
+				province_id = 45
+				province_id = 112
 			}
 			NOT = { owned_by = ROOT }
 			NOT = { culture = ROOT }
@@ -1691,14 +1736,29 @@ lcu_slot5_branch = {
 				religion = ROOT
 				culture = ROOT
 			}
+			266 = {
+				owned_by = ROOT
+				religion = ROOT
+				culture = ROOT
+			}
+			45 = {
+				owned_by = ROOT
+				religion = ROOT
+				culture = ROOT
+			}
+			112 = {
+				owned_by = ROOT
+				religion = ROOT
+				culture = ROOT
+			}
 																									
 		}
 
 		effect = {
-			add_country_modifier = {
-				name = "lcu_show_of_strength"
-				duration = -1
-			}				
+			custom_tooltip = lcu_europe_domination_ct
+			hidden_effect = {
+				set_country_flag = lcu_domination_flag	
+			}	
 		}
 	}
 }

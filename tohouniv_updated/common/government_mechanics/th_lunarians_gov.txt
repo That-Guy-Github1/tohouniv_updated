@@ -27,7 +27,7 @@ th_lunarians_gov = {
 		Sacred_ceremony = {
 			icon = GFX_lcu_gov_sagume
 			cost_type = lunar_adm_power
-			cost = 100
+			cost = 125
 			trigger = {
 			}
 			effect = {
@@ -68,7 +68,7 @@ th_lunarians_gov = {
 		Purge_impurity = {
 			icon = GFX_lcu_gov_toyohime
 			cost_type = lunar_dip_power
-			cost = 100
+			cost = 125
 			trigger = { 
 			}
 			effect = { 
@@ -97,12 +97,12 @@ th_lunarians_gov = {
 		Iron_discipline = {
 			icon = GFX_lcu_gov_yorihime
 			cost_type = lunar_mil_power
-			cost = 100
+			cost = 125
 			trigger = {
 				army_tradition = 10
 			}
 			effect = {
-				add_yearly_manpower = 0.8`
+				add_yearly_manpower = 1
 				add_army_tradition = -10
 				create_general = {
 					tradition = 100

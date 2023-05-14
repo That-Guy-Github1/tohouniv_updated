@@ -508,7 +508,7 @@ country_event = {   #Learn from Suwako
 country_event = {   #Weather control lvl 3
 	id = flavor_hvr.12
 	title = flavor_hvr.12.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_IKU_eventPicture
 	desc = flavor_hvr.12.desc
 	is_triggered_only = yes
 
@@ -524,7 +524,7 @@ country_event = {   #Weather control lvl 3
 country_event = {   #Get some panzer
 	id = flavor_hvr.13
 	title = flavor_hvr.13.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_eventPicture
 	desc = flavor_hvr.13.desc
 	is_triggered_only = yes
 
@@ -536,12 +536,12 @@ country_event = {   #Get some panzer
 				mil_tech = 7
 			}
 			capital_scope = {
-				artillery = ROOT
-				artillery = ROOT
-				artillery = ROOT
-				artillery = ROOT
-				artillery = ROOT
-				artillery = ROOT
+				large_cast_iron_bombard = ROOT
+				large_cast_iron_bombard = ROOT
+				large_cast_iron_bombard = ROOT
+				large_cast_iron_bombard = ROOT
+				large_cast_iron_bombard = ROOT
+				large_cast_iron_bombard = ROOT
 				
 			}
 		}
@@ -563,7 +563,7 @@ country_event = {   #Get some panzer
 country_event = {   #Asking nicely Nitori for some technologies
 	id = flavor_hvr.14
 	title = flavor_hvr.14.t
-	picture = NITORI_GADGET_eventPicture
+	picture = NITORI_eventPicture
 	desc = flavor_hvr.14.desc
 	is_triggered_only = yes
 
@@ -575,7 +575,7 @@ country_event = {   #Asking nicely Nitori for some technologies
 			}
 		}
 		ai_chance = {
-			factor = 25
+			factor = 15
 		}
 
 	}
@@ -588,7 +588,7 @@ country_event = {   #Asking nicely Nitori for some technologies
 			}
 		}
 		ai_chance = {
-			factor = 65
+			factor = 75
 		}
 	}
 

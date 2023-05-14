@@ -1600,6 +1600,13 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Touhou/YORIHIME_TENSHI_eventPicture.dds"
 		allwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "TENSHI_IKU_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/TENSHI_IKU_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
 	
 	spriteType = {
 		name = "BURNINGBUNNY_eventPicture"

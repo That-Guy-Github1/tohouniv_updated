@@ -3389,7 +3389,7 @@ rus_russian_bureaucracy = {
 			OR = {
 				has_reform = tysyatsky_reform
 				has_reform = namestnik_reform
-				ta`g = RAN
+				tag = RAN
 			}
 			owns_or_non_sovereign_subject_of = 274
 			owns_or_non_sovereign_subject_of = 310

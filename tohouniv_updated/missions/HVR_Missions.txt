@@ -1996,6 +1996,9 @@ hvr_slot4_branch = {
 				}
 			} 
 			else = {
+				hidden_effect = {
+					set_country_flag = hvr_yukari_beaten_up
+				}
 				add_country_modifier = {
 					name = hvr_beaten_old_hag
 					duration = 7300

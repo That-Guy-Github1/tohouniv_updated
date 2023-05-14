@@ -1549,17 +1549,23 @@ lcu_ambitious_project = {						 #Permanent province
 
 lcu_pearl_of_moon = {						     #Permanent province
 	fort_level = 1
-	local_defensiveness = 0.25
+	local_defensiveness = 0.50
 	local_governing_cost = -0.75
 }
 
 lcu_reisen_lab = {						     #Permanent province
 	local_institution_spread = 1
-	local_development_cost = -0.2
+	local_development_cost = -0.3
 	allowed_num_of_buildings = 1
 }
 
+lcu_purified_europe_modifier = {
+	missionaries = 1
+}
 
+lcu_purified_gensokyo_modifier = {
+	missionaries = 1
+}
 
 #KPP event modifiers
 th_estate_burghers_mass_marine_conscription_modifier = {
@@ -1767,6 +1773,11 @@ hva_loyal_subject = {
 }
 
 #Missions, will move it out of here later
+
+lcu_world_dominance_modifier = {
+	culture_conversion_time = -0.25
+	missionary_maintenance_cost = -0.5
+}
 
 hvr_continue_colonisation_effort = {
 	colonist_placement_chance = 0.2

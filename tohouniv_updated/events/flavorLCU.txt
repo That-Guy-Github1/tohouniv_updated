@@ -1736,7 +1736,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				total_development = 200
+				total_development = 300
 			}
 		}
 	}
@@ -1760,7 +1760,7 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { total_development = 200 }
+				NOT = { total_development = 300 }
 			}
 		}
 	}
@@ -1784,6 +1784,31 @@ country_event = {
 		}
 		add_dip_power = 50
 		add_mil_power = 50
+	}
+}
+
+country_event = {
+	id = flavor_lcu.102
+	title = flavor_lcu.102.t
+	desc = flavor_lcu.102.desc
+	picture = LUNAR_DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {	
+		name = flavor_lcu.102.a
+		add_accepted_culture = Lunarian_culture
+		change_religion = th_lunarian_religion
+		add_prestige = -25
+		ai_chance = {
+			factor = 99
+		}
+	}
+	option = {	
+		name = flavor_lcu.102.b
+		add_prestige = 10
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 

@@ -642,14 +642,14 @@ country_event = {
 	desc = flavor_lcu.15.desc
 	picture = WATATSUKI_SISTERS_eventPicture
 	is_triggered_only = yes
-
+	major = yes
 	option = {	
 		name = flavor_lcu.15.a
 
 		change_price = {
 			trade_goods = wine
 			key = th_purified_europe
-			value = 0.75
+			value = 1
 			duration = -1
 		}
 		add_country_modifier = {

@@ -104,8 +104,18 @@ country_event = {
 				}
 			}
 			354 = {
+				add_base_tax = 5
+				add_base_manpower = 5
+				add_base_production = 5
+			}
+			2452 = {
 				add_base_tax = 3
-				add_base_manpower = 2
+				add_base_manpower = 3
+				add_base_production = 3
+			}
+			2451 = {
+				add_base_tax = 3
+				add_base_manpower = 3
 				add_base_production = 3
 			}
 		}

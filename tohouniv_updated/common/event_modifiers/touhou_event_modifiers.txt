@@ -1549,7 +1549,7 @@ lcu_ambitious_project = {						 #Permanent province
 
 lcu_pearl_of_moon = {						     #Permanent province
 	fort_level = 1
-	local_defensiveness = 0.50
+	local_defensiveness = 0.75
 	local_governing_cost = -0.75
 }
 

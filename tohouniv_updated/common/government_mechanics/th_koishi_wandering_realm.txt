@@ -9,12 +9,12 @@ th_koishi_wandering_realm = {
 		koishi_adm_power = {
 			max = 150
 			monarch_power = ADM
-			base_monthly_growth = 0.25
+			base_monthly_growth = 0.2
 		}
 		koishi_dip_power = {
 			max = 150
 			monarch_power = DIP
-			base_monthly_growth = 0.2
+			base_monthly_growth = 0.35
 		}
 		koishi_mil_power = {
 			max = 150
@@ -82,7 +82,7 @@ th_koishi_wandering_realm = {
 				}
 				else_if = {
 					limit = {
-						total_development = 200
+						total_development = 150
 					}
 					random_capital_province = {
 						limit = {
@@ -104,15 +104,8 @@ th_koishi_wandering_realm = {
 		kmj_subconscious_manipulation = {
 			icon = GFX_kmj_subconscious_manipulation
 			cost_type = koishi_dip_power
-			cost = 100
+			cost = 50
 			trigger = {
-				any_country = {
-					is_in_war = {
-						defender_leader = ROOT
-						duration = 1
-					}
-					is_free_or_tributary_trigger = yes
-				} 
 			}
 			effect = { 
 				custom_tooltip = kmj_sub_manipulation_tt
@@ -130,7 +123,7 @@ th_koishi_wandering_realm = {
 					duration = 1825
 				}
 			} 			
-			cooldown_years = 15
+			cooldown_years = 10
 			ai_chance = {
 				factor = 1
 			}

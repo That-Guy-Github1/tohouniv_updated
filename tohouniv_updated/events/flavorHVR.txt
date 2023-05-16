@@ -381,6 +381,7 @@ country_event = {   #Offer for Lunarians to make PU
 
 	option = {	#agree to personal unuon
 	name = flavor_hvr.6.a
+	custom_tooltip = flavor_hvr.6.a.ct
 		HVR = {
 			country_event = {
 				id = flavor_hvr.7
@@ -563,12 +564,13 @@ country_event = {   #Get some panzer
 country_event = {   #Asking nicely Nitori for some technologies
 	id = flavor_hvr.14
 	title = flavor_hvr.14.t
-	picture = NITORI_eventPicture
+	picture = TENSHI_Rainbow_eventPicture
 	desc = flavor_hvr.14.desc
 	is_triggered_only = yes
 
 	option = {	#offer accepted, become vassal
 	name = flavor_hvr.14.a
+	custom_tooltip = flavor_hvr.14.a.ct
 		HVR = {
 			country_event = {
 				id = flavor_hvr.15
@@ -577,11 +579,13 @@ country_event = {   #Asking nicely Nitori for some technologies
 		ai_chance = {
 			factor = 15
 		}
+		
 
 	}
 
 	option = {	## how about we just become friends, without being a vassal?
 		name = flavor_hvr.14.b
+		custom_tooltip = flavor_hvr.14.b.ct
 		HVR = {
 			country_event = {
 				id = flavor_hvr.16
@@ -593,7 +597,8 @@ country_event = {   #Asking nicely Nitori for some technologies
 	}
 
 	option = {	## declined
-		name = flavor_hvr.17.c
+	custom_tooltip = flavor_hvr.14.c.ct
+		name = flavor_hvr.14.c
 		HVR = {
 			country_event = {
 				id = flavor_hvr.17
@@ -609,7 +614,7 @@ country_event = {   #Asking nicely Nitori for some technologies
 country_event = {   #Nitori accepted offer
 	id = flavor_hvr.15
 	title = flavor_hvr.15.t
-	picture = NITORI_GADGET_eventPicture
+	picture = NITORIBOSS_eventPicture
 	desc = flavor_hvr.15.desc
 	is_triggered_only = yes
 
@@ -625,7 +630,7 @@ country_event = {   #Nitori accepted offer
 country_event = {   #Counter-offer from Nitori
 	id = flavor_hvr.16
 	title = flavor_hvr.16.t
-	picture = NITORI_GADGET_eventPicture
+	picture = NITORIBOSS_eventPicture
 	desc = flavor_hvr.16.desc
 	is_triggered_only = yes
 
@@ -664,7 +669,7 @@ country_event = {   #Counter-offer from Nitori
 country_event = {   #Declined
 	id = flavor_hvr.17
 	title = flavor_hvr.17.t
-	picture = NITORI_GADGET_eventPicture
+	picture = NITORIBOSS_eventPicture
 	desc = flavor_hvr.17.desc
 	is_triggered_only = yes
 
@@ -691,7 +696,7 @@ country_event = {   #Declined
 country_event = {   #Tenshi payed up with gold /// #event for Nitori
 	id = flavor_hvr.18
 	title = flavor_hvr.18.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_Rainbow_eventPicture
 	desc = flavor_hvr.18.desc
 	is_triggered_only = yes
 

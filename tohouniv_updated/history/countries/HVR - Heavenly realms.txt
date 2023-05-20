@@ -5,7 +5,7 @@ primary_culture = Heavenish
 religion = th_taoist
 technology_group = tech_gensokyan
 capital = 5032 #Dragon`s palace
-
+save_global_event_target_as = Tenshi
 1443.1.1 = {
 	monarch = {
 		name = "Celestial Representative"

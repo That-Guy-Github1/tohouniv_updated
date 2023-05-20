@@ -710,7 +710,7 @@ country_event = {   #Tenshi payed up with gold /// #event for Nitori
 country_event = {   #Release Novgorod vassal
 	id = flavor_hvr.19
 	title = flavor_hvr.19.t
-	picture = NITORI_GADGET_eventPicture
+	picture = SLAVIC_GODS_eventPicture
 	desc = flavor_hvr.19.desc
 	is_triggered_only = yes
 
@@ -828,7 +828,7 @@ country_event = {   #Release Novgorod vassal
 country_event = {   #judgement day
 	id = flavor_hvr.20
 	title = flavor_hvr.20.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_ANGEL_eventPicture
 	desc = flavor_hvr.20.desc
 	is_triggered_only = yes
 
@@ -1839,7 +1839,7 @@ country_event = {   #Open up Resort
 
 
 	option = {	 
-	name = flavor_hvr.41.a
+	name = flavor_hvr.42.a
 		if = {
 			limit = { has_dlc = "Leviathan" }
 			5036 = {
@@ -1910,7 +1910,7 @@ country_event = {   #Open up Resort
 country_event = {   #### Convert everyone to our religion
 	id = flavor_hvr.43
 	title = flavor_hvr.43.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_ANGEL_eventPicture
 	desc = flavor_hvr.20.desc
 	is_triggered_only = yes
 
@@ -1940,6 +1940,39 @@ country_event = {   #### Convert everyone to our religion
 			}
 			add_stability = -3
 		}
+}
+
+country_event = {   #Open up Dancing Halls
+	id = flavor_hvr.44
+	title = flavor_hvr.44.t
+	picture = IKU_eventPicture
+	desc = flavor_hvr.44.desc
+	is_triggered_only = yes
+
+
+	option = {	 
+	name = flavor_hvr.44.a
+	if = {
+		limit = { has_dlc = "Leviathan" }
+		add_treasury = -2500
+		5312 = {
+			set_province_flag = hvr_dancing_halls_unlocked
+			add_great_project = {
+				type = th_monument_hvr_dancing_halls
+				instant = yes
+			}
+		}
+	}
+	else = {
+		add_treasury = -2500
+		5312 = {
+			add_province_modifier = {
+				name = hvr_gambling_halls_of_heaven_modifier
+				duration = -1
+			}
+		}
+	}
+ }
 }
 
 

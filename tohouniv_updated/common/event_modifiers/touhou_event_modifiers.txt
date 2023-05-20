@@ -1676,7 +1676,7 @@ jnk_grace_of_goddess_of_vengeance = {
 #Heavenly Realm event modifiers
 
 hvr_judgement_day_modifier = {
-	missionaries = 2
+	missionaries = 3
 	global_missionary_strength = 0.06
 }
 
@@ -1774,6 +1774,16 @@ hva_loyal_subject = {
 
 #Missions, will move it out of here later
 
+hvr_keystones_modifier = {
+	movement_speed_in_fleet_modifier = 4
+}
+
+hvr_keystones_for_marines_modifier = {
+	movement_speed = 0.2
+	regiment_disembark_speed = 0.25
+	is_marine_modifier = yes
+}
+
 lcu_world_dominance_modifier = {
 	culture_conversion_time = -0.25
 	missionary_maintenance_cost = -0.5
@@ -1800,6 +1810,11 @@ hvr_remnants_of_unusual_technology = {
 hvr_gambling_halls_of_heaven_modifier = {
 	tax_income = 20
 	local_development_cost_modifier = -0.2
+}
+
+hvr_dancing_halls_modifier = {
+	recover_army_morale_speed = 0.1
+	recover_navy_morale_speed = 0.1
 }
 
 hvr_resort_paradise_modifier = {
@@ -1841,6 +1856,7 @@ hvr_blood_angels = {
 
 hvr_ride_the_lightning = {
 	heavy_ship_power = 0.15
+	global_naval_barrage_cost = -0.66
 }
 
 hvr_stairway_to_heaven_modifier = {
@@ -1853,6 +1869,15 @@ hvr_harmony_modifier = {
 	idea_cost = -0.1
 	tolerance_heathen = 1
 	tolerance_heretic = 1
+}
+
+###Script
+
+hvr_keystone_scouts_friendly = {
+	local_friendly_movement_speed = 1
+}
+hvr_keystone_scouts_hostile = {
+	local_hostile_movement_speed = 1
 }
 
 #Mechanic / GOV. mechanic

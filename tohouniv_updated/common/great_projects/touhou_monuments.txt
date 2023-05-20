@@ -3368,7 +3368,7 @@ th_monument_hvr_resort = {
 		}
 
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 2500
 		}
 
 		province_modifiers = {
@@ -3401,7 +3401,7 @@ th_monument_hvr_resort = {
 
 		
 		cost_to_upgrade = {
-			factor = 2000
+			factor = 5000
 		}
 
 		
@@ -3411,7 +3411,7 @@ th_monument_hvr_resort = {
 
 		
 		area_modifier = {
-			province_trade_power_modifier = 0.2
+			province_trade_power_modifier = 0.25
 			trade_goods_size_modifier = 0.2
 			local_development_cost = -0.2
 			local_gold_depletion_chance_modifier = -0.5
@@ -3448,9 +3448,9 @@ th_monument_hvr_resort = {
 
 		
 		area_modifier = {
-			province_trade_power_modifier = 0.4
-			trade_goods_size_modifier = 0.4
-			local_development_cost = -0.4
+			province_trade_power_modifier = 0.5
+			trade_goods_size_modifier = 0.3
+			local_development_cost = -0.3
 			local_gold_depletion_chance_modifier = -1
 		}
 
@@ -3639,6 +3639,186 @@ hakurei_portal = {
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
+		}
+	}
+}
+
+th_monument_hvr_dancing_halls = {
+	#start = 5312 #Thunder Terrace
+
+	date = 1721.2.1
+
+	time = {
+		months = 60
+	}
+
+	build_cost = 0
+
+	can_be_moved = no
+
+	starting_tier = 1
+
+	#project type
+	type = monument
+
+	build_trigger = {
+		has_province_flag = hvr_dancing_halls_unlocked
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		th_is_gensokyan_or_japanese = yes
+		th_province_is_or_accepts_culture = yes
+		OR = {
+			th_province_is_or_accepts_religion_group = {
+				religion_group = Touhou
+			}
+			th_province_is_or_accepts_religion_group = {
+				religion_group = lunarian_religion_g
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		th_is_gensokyan_or_japanese = yes
+		th_province_is_or_accepts_culture = yes
+		OR = {
+			th_province_is_or_accepts_religion_group = {
+				religion_group = Touhou
+			}
+			th_province_is_or_accepts_religion_group = {
+				religion_group = lunarian_religion_g
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 60
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+			local_manpower_modifier = 0.25
+		}
+
+		area_modifier = {
+		}
+
+		region_modifier = {
+		}
+
+
+		country_modifiers = {
+			recover_army_morale_speed = 0.05
+			recover_navy_morale_speed = 0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 90
+		}
+
+		
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		
+		province_modifiers = {
+			local_manpower_modifier = 0.50
+			local_development_cost = -0.1
+		}
+
+		
+		area_modifier = {
+		}
+
+		region_modifier = {
+		}
+
+		country_modifiers = {
+			recover_army_morale_speed = 0.1
+			recover_navy_morale_speed = 0.1
+		}
+
+		
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 120
+		}
+
+		
+		cost_to_upgrade = {
+			factor = 10000
+		}
+
+		
+		province_modifiers = {
+			local_manpower_modifier = 0.50
+			local_development_cost = -0.2
+		}
+
+		
+		area_modifier = {
+		}
+
+		region_modifier = {
+		}
+
+		
+		country_modifiers = {
+			recover_army_morale_speed = 0.2
+			recover_navy_morale_speed = 0.2
+			land_morale = 0.05
+			naval_morale = 0.05
+		}
+		
+		on_upgraded = {
+
 		}
 	}
 }

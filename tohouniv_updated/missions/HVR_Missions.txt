@@ -407,7 +407,7 @@ hvr_slot1_branch = {
 		} 
 
 		trigger = {
-			treasury = 1000	 
+			treasury = 2500	 
 			5036 = {
 				development = 25
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1004,6 +1004,36 @@ hvr_slot2_branch = {
 		} 
 	}
 
+	HVR_dancing_halls = {
+		icon = mission_dancing_halls
+		position = 12
+		required_missions = { HVR_gambling_halls_of_heaven HVR_blood_and_thunder }
+		provinces_to_highlight = { 
+				province_id = 5312
+			NOT = { development = 30}
+		} 
+
+		trigger = {
+			treasury = 2500	 
+			5312 = {
+				development = 30
+				owned_by = ROOT
+			}
+			army_professionalism = 0.75
+			OR = {
+				navy_tradition = 75
+				full_idea_group = maritime_ideas
+				full_idea_group = naval_ideas
+			}
+		} 
+
+		effect = { 
+			country_event = {
+				id = flavor_hvr.44
+			}
+		}
+	}
+
 	HVR_wrath_of_zeus = {
 		icon = mission_zeus
 		position = 14
@@ -1490,8 +1520,13 @@ hvr_slot3_branch = {
 
 		trigger = { 
 			num_of_heavy_ship = 100
-			navy_tradition = 80
-			army_professionalism = 0.8	
+			OR = {
+				navy_tradition = 90
+				full_idea_group = maritime_ideas
+				full_idea_group = naval_ideas
+			}
+
+			army_professionalism = 0.9
 		} 
 
 		effect = {
@@ -2003,6 +2038,40 @@ hvr_slot4_branch = {
 					name = hvr_beaten_old_hag
 					duration = 7300
 				}
+			}
+		} 
+	}
+
+	HVR_way_to_use_keystones = {	
+		icon = mission_keystones
+		position = 12
+		required_missions = { HVR_blood_and_thunder }
+		provinces_to_highlight = { 
+		} 
+
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				has_shipyard_building_trigger = yes
+				value = 20
+			}
+			has_leader_with = {
+				admiral = yes
+				manuever = 5
+			}
+			has_leader_with = {
+				general = yes
+				manuever = 5
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = hvr_keystones_modifier
+				duration = -1
+			}
+			add_country_modifier = {
+				name = hvr_keystones_for_marines_modifier
+				duration = -1
 			}
 		} 
 	}

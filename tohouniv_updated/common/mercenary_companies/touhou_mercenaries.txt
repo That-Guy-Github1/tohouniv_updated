@@ -785,3 +785,20 @@ merc_th_wild_oni_from_heaven = {
 		movement_speed = 0.1
 	}
 }
+
+merc_keystone_scouts = {
+	regiments_per_development = 0.01
+	home_province = 5032
+	sprites = { dlc068_jap_sprite_pack jap_base_sprite_pack }
+	trigger = {
+		th_is_allowed_to_recruit_mercenaries = yes
+		th_unlocked_mercenary_company = {
+			mercenary_company = merc_keystone_scouts
+		}
+	}
+
+	cavalry_weight = 1
+	modifier = {
+		movement_speed = 0.5
+	}
+}

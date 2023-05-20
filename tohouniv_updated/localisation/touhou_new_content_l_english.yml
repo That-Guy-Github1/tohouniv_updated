@@ -215,9 +215,17 @@ flavor_hvr.17.a: "They asked for this."
 flavor_hvr.18.t: "Heavenly Realms accepted our Counter-Offer!"
 flavor_hvr.18.desc: "It looks like we have made a nice deal! For a nice sum of ducats, we will share our technologies with them, while still maintaining friendly relations!"
 flavor_hvr.18.a: "And here comes the Ducats!"
+flavor_hvr.19.t: "Dualism of Slavic Gods"
+flavor_hvr.19.desc: "In old Slavic culture, the gods and spirits were polarized, representing opposites, such as darkness and light, masculine and feminine.\n\nFor Slavic people, the highest god of the pantheon was Perun, the god of sky, thunder, lightning, storms, rain, law, war, fertility and oak trees. With Iku abilities to control thunder, lightning, storm and rain, it will be quite easy to represent her as the descendant of the Perun, gaining the trust of the Slavic people, and converting them to the old faith!\n\nMat Zemlya, meaning Mother Earth, was being the oldest deity in old Slavic religion, and one of the most important one too. The earth, according to the common Slavic tradition, is a symbol of motherhood and femininity. She is the universal Mother and nurse: she nourishes the living, and accepts the dead. With Tenshi ability to control and manipulate Earth, she is more than ready to prove herself to be a Mother Earth for the Slavic people, returning their faith to the old ways. Even before becoming a celestial, Tenshi first name was Chiko, which means Earth Child. Who knows, perhaps Tenshi was always connected to Mother Earth, being her descendant.\n\nIn riddles and old sayings, archaic ideas about sky (Perun) and earth (Mother Earth) as a married couple have been preserved. With both Iku representing Perun, and Tenshi representing Mother Earth, we will surely gain trust of Slavic people!"
+flavor_hvr.19.a: "Welcome to True Faith!"
+flavor_hvr.20.t: "Judgement Day"
+flavor_hvr.20.desc: "With the fall of Rome, and arrival of that mysterious girl that claim herself to be a Celestial Angel and Goddess at the same time, Christians really started to doubt their own faith. The rumors says, that the Judgement day is here, and the only way to find the salvation - is to accept Tenshi as our saviour.\n\nAnd we can certainly use that against them! Let them think that the Judgement day is upon them, and that only Tenshi can save them! So, abandom your old faith, and accept Tenshi as your sole Saviour in the apocalypce ahead! And for those that still doubt Tenshi... there is a few meteorites that can accidently fall into your country!"
+flavor_hvr.20.a: "Let the Judgement Day begin!"
 
 
-
+flavor_hvr.44.t: "Dance Halls"
+flavor_hvr.44.desc: "Iku Nagae waited for that long enough, but now, we can fulfill her wish! The Dance Halls will be build. Using the most advanced technologies that we have and... some unusual technologies from the outside world, provided to us by Yukari, we are sure that will create something magnificient in entertaiment department.\n\nThe construction is already complete! The only thing that is left, is to open Dance Halls officially!"
+flavor_hvr.44.a: "Let's open them Dance Halls right away!"
 
 flavor_lcu.102.t: "Lunarian Faith"
 flavor_lcu.102.desc: "Now that Eientei is being controlled by Lunarians, perhaps it is time for us to adopt Lunarian faith?"
@@ -265,6 +273,10 @@ flavor_ymu.2.a: "Welcome back."
  desc_lunar_lunarian_security_corps_aspect_v2: "In the past the Moon Rabbits were ready to cause revolts against their supreme masters and it took massive amounts of severe actions to get things under control again. This kind of events resulted eventually into the creation of the Lunarian Security Corps, the government's own police, who controls in regular times the realm's subjects so they don't get funny ideas."
 
 ### Modifiers
+hvr_keystones_modifier: "Keystones attached to our Ships!"
+hvr_keystones_modifier_desc: "We have attached keystones to our ships, increasing their speed that way!"
+hvr_keystones_for_marines_modifier: "Scout party for our Marines!"
+hvr_keystones_for_marines_modifier_desc: "A scout party, floating around on keystones, will grant information about terrain to our marines!"
 hvr_heavy_rain: "Heavy Rain"
 hvr_heavy_rain_desc: "TODO"
 hvr_disperse_clouds: "Dispersed Clouds"
@@ -316,8 +328,9 @@ hva_loyal_subject: "Loyal Subject"
 hva_loyal_subject_desc: "We are loyal to our Heavenly Realm, because they granted tham large autonomy."
 conversion_zeal_v2: "Conversion Zeal"
 ### Monument for Tenshi
-th_monument_hvr_casino: "Grand Casino"
-th_monument_hvr_resort: "Resort Paradise"
+th_monument_hvr_dancing_halls: "§ODance Halls§!"
+th_monument_hvr_casino: "§YGrand Casino§!"
+th_monument_hvr_resort: "§OResort Paradise§!"
 ### Ideas
 RAN_Scheming_Nine_Tailed_Fox: "Scheming Nine Tailed Fox"
 RAN_Scheming_Nine_Tailed_Fox_desc: ""
@@ -425,6 +438,11 @@ RAN_ideas_start: "Fox Traditions"
 RAN_ideas_bonus: "Fox Ambition"
 #missions:
 l_english:
+HVR_way_to_use_keystones_title: "Best Way to use Keystones!"
+HVR_way_to_use_keystones_desc: "Keystones... We can control them, but we didn't find much use of them, other than throwing them at enemies... until now! With the development of our army and fleet, Tenshi have noticed that we can use keystones in quite unusual and useful way.\n\nBy attaching these Keystones to our ships, and controlling them, we can boost the speed of our ships to absolutely new levels!\n\nNot only that, we can create a scout party that will float around on the keystones! They will be able to scout the area before engagement, and provide us with a value information about the shortest route available! We won't be able to create a scout party for every single unit of our army, but, we will manage to do so for our marines!"
+HVR_dancing_halls_title: "Dance Halls"
+HVR_dancing_halls_desc: "Our troops have already proven to be one of the best, always eager to battle and adventure. All thanks to Iku Nagae, who leads them into the battle, be it land, or sea. However, even the best troops tire up with time. And Iku Nagae, along with her marines brigade, is not exception.\n\nAs we know, Iku is quite interested in dancing. What if we will build a whole Dance Hall for her and her troops? Surely, Iku will be glad to receive such favor from us! Not to mention, it will improve troops morale too! By allowing them to rest from time to time, we will improve the quality of our troops in the long run."
+
 HVR_judgement_day_title: "Judgement Day"
 HVR_judgement_day_desc: ""
 

@@ -1814,6 +1814,15 @@ spriteTypes = {
 		name = "mission_angel_of_apocalypse"
 		texturefile = "gfx//interface//missions//touhou_missions//mission_angel_of_apocalypse.dds"
 	}
+	spriteType = {
+		name = "mission_dancing_halls"
+		texturefile = "gfx//interface//missions//touhou_missions//mission_dancing_halls.dds"
+	}
+	spriteType = {
+		name = "mission_keystones"
+		texturefile = "gfx//interface//missions//touhou_missions//mission_keystones.dds"
+	}
+	
 }
 
 

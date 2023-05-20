@@ -1606,6 +1606,26 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Touhou/TENSHI_IKU_eventPicture.dds"
 		allwaystransparent = yes
 	}
+	spriteType = {
+		name = "IKU_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/IKU_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "SLAVIC_GODS_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/SLAVIC_GODS_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "TENSHI_ANGEL_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/TENSHI_ANGEL_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+
+
 
 	
 	spriteType = {

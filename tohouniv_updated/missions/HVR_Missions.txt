@@ -1392,6 +1392,7 @@ hvr_slot3_branch = {
 			add_splendor = 400
 			add_government_reform = Gensokyan_hvr_absolute_dictatorship
 			end_disaster = th_return_of_tenshi_disaster
+			set_country_flag = Gensokyan_hvr_absolute_dictatorship_flag
 		} 
 	}
 
@@ -1960,10 +1961,9 @@ hvr_slot4_branch = {
 
 		trigger = { 
 			OR = {
-				has_spy_network_in = { 
-					who = MHG 
-					value = 40 
-				}	
+				MHG = {
+					has_been_insulted_by_root = yes
+				}
 				NOT = { exists = MHG }	
 			}
 		 } 
@@ -2003,6 +2003,10 @@ hvr_slot4_branch = {
 		} 
 
 		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = hvr_tenshi_on_throne_tt
+				has_ruler_flag = th_original_tenshi
+			}
 			if = {
 				limit = {
 					exists = MHG
@@ -2027,7 +2031,7 @@ hvr_slot4_branch = {
 					exists = MHG
 				}
 				country_event = {
-					id = flavor_hvr.22
+					id = flavor_hvr.45
 				}
 			} 
 			else = {
@@ -2180,12 +2184,17 @@ hvr_slot5_branch = {
 		required_missions = {  }
 		provinces_to_highlight = {  } 
 
-		trigger = { 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = hvr_tenshi_on_throne_tt
+				has_ruler_flag = th_original_tenshi
+			} 
 			navy_size_percentage = 1
 			treasury = 50
 		} 
 
 		effect = { 
+			th_enable_exploration_without_explo_ideas = yes
 				add_country_modifier = {
 					name = hvr_begin_exploration_modifier
 					duration = 10950
@@ -2221,7 +2230,6 @@ hvr_slot5_branch = {
 		} 
 
 		effect = { 
-			th_enable_exploration_without_explo_ideas = yes
 			country_event = {
 				id = flavor_hvr.24
 			}

@@ -1729,6 +1729,11 @@ hvr_expedition_lvl_3 = {
 	global_colonial_growth = 100
 }
 
+hvr_expedition_lvl_4 = {
+	colonists = 2
+	global_colonial_growth = 100
+}
+
 hvr_additional_expedition_force = {
 	colonists = 1
 }

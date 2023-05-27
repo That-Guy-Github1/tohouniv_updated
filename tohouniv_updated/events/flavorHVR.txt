@@ -35,6 +35,7 @@ country_event = {   #Tenshi is back
 			set_ruler_flag = touhou_original_ruler
 			set_ruler_flag = touhou_character_ruler
 			add_ruler_personality = immortal_personality
+			set_ruler_flag = th_original_tenshi
 		}
 		add_country_modifier = {
 			name = hvr_disloyal_nobles
@@ -531,7 +532,6 @@ country_event = {   #Get some panzer
 
 	option = {	
 	name = flavor_hvr.13.a
-	hidden_effect = {
 		if = {
 			limit = {
 				mil_tech = 7
@@ -556,7 +556,7 @@ country_event = {   #Get some panzer
 				large_cast_bronze_mortar = ROOT
 			}
 		}
-	}
+	
 
 	}
 }
@@ -860,7 +860,7 @@ country_event = {   #judgement day
 country_event = {   #Miko Event
 	id = flavor_hvr.21
 	title = flavor_hvr.21.t
-	picture = NITORI_GADGET_eventPicture
+	picture = MIKO_eventPicture
 	desc = flavor_hvr.21.desc
 	is_triggered_only = yes
 
@@ -877,10 +877,10 @@ country_event = {   #Miko Event
 country_event = {   #Killing Yukari
 	id = flavor_hvr.22
 	title = flavor_hvr.22.t
-	picture = NITORI_GADGET_eventPicture
+	picture = SOMBER_YUKARI_eventPicture
 	desc = flavor_hvr.22.desc
 	is_triggered_only = yes
-
+	major = yes
 	option = {	
 	name = flavor_hvr.22.a
 		set_country_flag = hvr_yukari_beaten_up
@@ -895,7 +895,11 @@ country_event = {   #Killing Yukari
 			name = hvr_beaten_old_hag
 			duration = 7300
 		}
-		add_prestige = 50
+		add_prestige_or_monarch_power = { amount = 100 }
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 50
+		}
 	}
 }
 
@@ -903,7 +907,7 @@ country_event = {   #Killing Yukari
 country_event = {   #Release Sapmi out of Sweden
 	id = flavor_hvr.23
 	title = flavor_hvr.23.t
-	picture = NITORI_GADGET_eventPicture
+	picture = SCANDINAVIAN_GODS_eventPicture
 	desc = flavor_hvr.23.desc
 	is_triggered_only = yes
 
@@ -1015,7 +1019,7 @@ country_event = {   #Release Sapmi out of Sweden
 country_event = {   #Begin Expedition
 	id = flavor_hvr.24
 	title = flavor_hvr.24.t
-	picture = NITORI_GADGET_eventPicture
+	picture = AUSTRALIA_eventPicture
 	desc = flavor_hvr.24.desc
 	is_triggered_only = yes
 
@@ -1025,7 +1029,7 @@ country_event = {   #Begin Expedition
 		add_manpower = -3
 		add_country_modifier = {
 			name = hvr_expedition_lvl_1
-			duration = 27375
+			duration = 23725
 		}
 	}
 
@@ -1035,7 +1039,7 @@ country_event = {   #Begin Expedition
 		add_manpower = -6
 		add_country_modifier = {
 			name = hvr_expedition_lvl_2
-			duration = 27375
+			duration = 23725
 		}
 	}
 
@@ -1045,7 +1049,16 @@ country_event = {   #Begin Expedition
 		add_manpower = -10
 		add_country_modifier = {
 			name = hvr_expedition_lvl_3
-			duration = 27375
+			duration = 23725
+		}
+	}
+	option = {	
+		name = flavor_hvr.24.d
+		add_years_of_income = -1.6
+		add_manpower = -25
+		add_country_modifier = {
+			name = hvr_expedition_lvl_4
+			duration = 23725
 		}
 	}
 }
@@ -1053,16 +1066,17 @@ country_event = {   #Begin Expedition
 country_event = {   #Rare materials in California
 	id = flavor_hvr.25
 	title = flavor_hvr.25.t
-	picture = NITORI_GADGET_eventPicture
+	picture = NEWCONTINENT_eventPicture
 	desc = flavor_hvr.25.desc
 	is_triggered_only = yes
 
 	option = {	
 	name = flavor_hvr.25.a
+	custom_tooltip = hvr_mining_expedition_tooltip
 		hidden_effect = {
 			country_event = {
 				id = flavor_hvr.26
-				days = 45
+				days = 90
 			}
 		}
 	}
@@ -1974,6 +1988,111 @@ country_event = {   #Open up Dancing Halls
 	}
  }
 }
+
+country_event = {   #Duel with Yukari
+	id = flavor_hvr.45
+	title = flavor_hvr.45.t
+	picture = TENSHI_YUKARI_eventPicture
+	desc = flavor_hvr.45.desc
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_ruler_flag = th_original_tenshi
+				}
+				th_getruler_fighting_skill = {
+					skill_boni = 700
+					type = normal
+				}
+			}
+			else = {
+				th_getruler_fighting_skill = {
+					skill_boni = 0
+					type = normal
+				}
+			}
+			#Yukari base fight skills
+			set_variable = {
+				which = th_yukari_combat_skills
+				value = 1800
+			}
+			#'Desperate' Fighting Skills
+			th_defineopponent_fighting_skill = {
+				variable = th_yukari_combat_skills
+				type = normal
+			}	
+		}
+	}
+	
+	option = {	
+	name = flavor_hvr.45.a
+		th_danmaku_normal_fight_ruler_and_opponent = {
+			win_event = flavor_hvr.22 
+			draw_event = flavor_hvr.46
+			defeat_event = flavor_hvr.47
+			days = 5
+		}	
+	
+		ai_chance = { 
+			factor = 1
+		}
+	}
+}
+
+country_event = {   #Draw to Yukari
+	id = flavor_hvr.46
+	title = flavor_hvr.46.t
+	picture = YUKARI_eventPicture
+	desc = flavor_hvr.46.desc
+	is_triggered_only = yes
+	major = yes
+	option = {	
+	name = flavor_hvr.46.a
+		set_country_flag = hvr_yukari_beaten_up
+		add_prestige_or_monarch_power = { amount = 25 }
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 15
+		}
+		MHG = {
+			limit = {
+				is_in_war = {
+				attacker_leader = ROOT
+				}
+			}
+			white_peace = ROOT
+		}
+	}
+}
+
+country_event = {   #Lost to Yukari
+	id = flavor_hvr.47
+	title = flavor_hvr.47.t
+	picture = YUKARI_eventPicture
+	desc = flavor_hvr.47.desc
+	is_triggered_only = yes
+	major = yes
+	option = {	
+	name = flavor_hvr.47.a
+		set_country_flag = hvr_yukari_beaten_up
+		add_prestige = -25
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = -10
+		}
+		MHG = {
+			limit = {
+				is_in_war = {
+				attacker_leader = ROOT
+				}
+			}
+			white_peace = ROOT
+		}
+	}
+}
+
 
 
 

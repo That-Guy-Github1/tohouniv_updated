@@ -1619,8 +1619,19 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "SCANDINAVIAN_GODS_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/SCANDINAVIAN_GODS_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
 		name = "TENSHI_ANGEL_eventPicture"
 		texturefile = "gfx/event_pictures/Touhou/TENSHI_ANGEL_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "TENSHI_YUKARI_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/TENSHI_YUKARI_eventPicture.dds"
 		allwaystransparent = yes
 	}
 

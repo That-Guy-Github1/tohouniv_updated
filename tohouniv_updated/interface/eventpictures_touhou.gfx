@@ -1635,7 +1635,23 @@ spriteTypes = {
 		allwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "TENSHI_NEWLANDS_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/TENSHI_NEWLANDS_eventPicture.dds"
+		allwaystransparent = yes
+	}
 
+	spriteType = {
+		name = "TENSHI_ROUTE66_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/TENSHI_ROUTE66_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "Canyon_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/Canyon_eventPicture.dds"
+		allwaystransparent = yes
+	}
 
 
 	

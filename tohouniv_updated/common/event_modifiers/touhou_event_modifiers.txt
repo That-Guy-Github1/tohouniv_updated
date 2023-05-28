@@ -1675,6 +1675,62 @@ jnk_grace_of_goddess_of_vengeance = {
 
 #Heavenly Realm event modifiers
 
+hva_trade_empire_lvl_1 = {
+	merchants = 2
+	global_trade_power = 0.1
+}
+
+hva_trade_empire_lvl_2 = {
+	merchants = 3
+	global_trade_power = 0.15
+}
+
+hva_trade_empire_lvl_3 = {
+	merchants = 4
+	global_trade_power = 0.2
+}
+
+hva_trade_empire_lvl_4 = {
+	merchants = 5
+	global_trade_power = 0.25
+}
+
+hva_trade_empire_lvl_5 = {
+	merchants = 6
+	global_trade_power = 0.3
+}
+
+hva_trade_empire_lvl_6 = {
+	merchants = 8
+	global_trade_power = 0.4
+	trade_steering = 0.1
+}
+
+hva_trade_empire_lvl_7 = {
+	merchants = 10
+	global_trade_power = 0.5
+	trade_steering = 0.2
+}
+
+hva_trade_empire_lvl_8 = {
+	merchants = 14
+	global_trade_power = 0.6
+	trade_steering = 0.33
+	caravan_power = 0.33
+}
+
+hva_military_focused_country = {
+	navy_tradition = 1
+	naval_morale = 0.1
+	allowed_marine_fraction = 0.5
+	land_morale = 0.1
+}
+
+hva_large_trade_company = {
+	trade_steering = 0.33
+	trade_efficiency = 0.1
+}
+
 hvr_judgement_day_modifier = {
 	missionaries = 3
 	global_missionary_strength = 0.06
@@ -1845,7 +1901,7 @@ hvr_empire_of_heaven_and_hell_modifier = {
 
 hvr_iku_office = {
 	local_ship_cost = -0.25
-	local_ship_repair = 0.25
+	local_ship_repair = 0.5
 	local_production_efficiency = 0.25
 }
 
@@ -1875,6 +1931,11 @@ hvr_harmony_modifier = {
 	tolerance_heathen = 1
 	tolerance_heretic = 1
 }
+
+hvr_rich_minerals_of_california = { #province modifier
+	trade_goods_size = 1
+}
+
 
 ###Script
 

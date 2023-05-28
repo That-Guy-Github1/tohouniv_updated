@@ -1076,7 +1076,7 @@ country_event = {   #Rare materials in California
 		hidden_effect = {
 			country_event = {
 				id = flavor_hvr.26
-				days = 90
+				days = 120
 			}
 		}
 	}
@@ -1105,6 +1105,10 @@ country_event = {   #Rare materials in California part 2
 			}
 			add_base_tax = 1
 			add_base_production = 2
+			add_province_modifier = {
+				name = hvr_rich_minerals_of_california
+				duration = -1
+			}
 		}
 
 		2478 = { 
@@ -1121,6 +1125,10 @@ country_event = {   #Rare materials in California part 2
 			}
 			add_base_tax = 1
 			add_base_production = 2
+			add_province_modifier = {
+				name = hvr_rich_minerals_of_california
+				duration = -1
+			}
 		}
 
 		871 = { 
@@ -1137,6 +1145,10 @@ country_event = {   #Rare materials in California part 2
 			}
 			add_base_tax = 1
 			add_base_production = 2
+			add_province_modifier = {
+				name = hvr_rich_minerals_of_california
+				duration = -1
+			}
 		}
 	}
 }
@@ -1144,7 +1156,7 @@ country_event = {   #Rare materials in California part 2
 country_event = {   #Heavenly States of America
 	id = flavor_hvr.27
 	title = flavor_hvr.27.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_eventPicture
 	desc = flavor_hvr.27.desc
 	is_triggered_only = yes
 
@@ -1180,13 +1192,10 @@ country_event = {   #Heavenly States of America
 			add_base_production = 3
 		}
 	}
-		add_country_modifier = {
-			name = hvr_powerful_establishment_in_america
-			duration = -1
-		}
+
 		release = HVA
 		create_subject = {
-			subject_type = th_heavenly_state
+			subject_type = th_special_march
 			subject = HVA
 		}
 		hidden_effect = {
@@ -1221,6 +1230,9 @@ country_event = {   #Heavenly States of America
 					female = yes
 					culture = ROOT
 					religion = ROOT
+					hidden_effect = {
+						add_ruler_personality = immortal_personality
+					}
 				}
 				east_china_sea_region = {
 					discover_country = HVA
@@ -1300,43 +1312,80 @@ country_event = {   #Heavenly States of America
 				}
 				add_permanent_claim = HVA 
 			}
-			add_country_modifier = {
-				name = hva_loyal_subject
-				duration = 36500
+			HVA = {
+				add_country_modifier = {
+					name = hva_loyal_subject
+					duration = 36500
+				}
 			}
+
 		}
 
     }
 }
 
 
-country_event = {   #Play as Heavenly USA
+country_event = {   #Select subject type for HVA
 	id = flavor_hvr.28
 	title = flavor_hvr.28.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_eventPicture
 	desc = flavor_hvr.28.desc
 	is_triggered_only = yes
 
+
+	option = { # HVA will become military-focused country
+		name = flavor_hvr.28.a
+		custom_tooltip = flavor_hvr.28.a.ct
+		ROOT = {
+			create_subject = {
+				subject_type = th_heavenly_state
+				subject = HVA
+			}
+		}
+		HVA = {
+			add_country_modifier = {
+				name = hva_military_focused_country
+				duration = -1
+			}
+		}
+	}
+
+	option = {  #HVA will become trade-focused country
+		name = flavor_hvr.28.b
+		set_country_flag = hva_is_trade_subject
+		custom_tooltip = flavor_hvr.28.b.ct
+		set_country_flag = hvr_trade_company_established
+		ROOT = {
+			create_subject = {
+				subject_type = th_heavenly_trade_company
+				subject = HVA
+			}
+		}
+		HVA = {
+			add_country_modifier = {
+				name = hva_large_trade_company
+				duration = -1
+			}
+		}
+	}
+
 	option = {	 ## Play as HVA
-	name = flavor_hvr.28.a
+	name = flavor_hvr.28.c
 		switch_tag = HVA
 	}
 
-	option = {	 # No
-	name = flavor_hvr.28.b
-		add_prestige = 10
-	}
 }
 
 country_event = {   #Begin contruction of route 66
 	id = flavor_hvr.29
 	title = flavor_hvr.29.t
-	picture = NITORI_GADGET_eventPicture
+	picture = Canyon_eventPicture
 	desc = flavor_hvr.29.desc
 	is_triggered_only = yes
 
 	option = {	 ## Time to wait
 	name = flavor_hvr.29.a
+	custom_tooltip = flavor_hvr.29.a.ct
 		add_treasury = -5000
 		hidden_effect = {
 			country_event = {
@@ -1350,7 +1399,7 @@ country_event = {   #Begin contruction of route 66
 country_event = {   #Completed contruction
 	id = flavor_hvr.30
 	title = flavor_hvr.30.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_ROUTE66_eventPicture
 	desc = flavor_hvr.30.desc
 	is_triggered_only = yes
 
@@ -2532,5 +2581,144 @@ country_event = {  # Armageddon
 				name = hvr_armageddon 
 				duration = 1850
 			}
+	}
+}
+
+
+country_event = {  # Armageddon
+	id = flavor_hvr.150
+	title = flavor_hvr.150.t
+	picture = TENSHI_eventPicture
+	desc = flavor_hvr.150.desc
+	is_triggered_only = yes
+
+	
+	option = { 
+		name = flavor_hvr.150.a
+		if = {
+			limit = {
+				HVA = {total_development = 200}
+				NOT = {HVA = {total_development = 400}}
+			}
+			add_country_modifier = {
+				name = hva_trade_empire_lvl_1
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 400}
+				NOT = {HVA = {total_development = 600}}
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_trade_empire_lvl_1
+			}
+			add_country_modifier = {
+				name = hva_trade_empire_lvl_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 600}
+				NOT = {HVA = {total_development = 800}}
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_trade_empire_lvl_1
+				remove_country_modifier = hva_trade_empire_lvl_2
+			}
+			add_country_modifier = {
+				name = hva_trade_empire_lvl_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 800}
+				NOT = {HVA = {total_development = 1000}}
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_trade_empire_lvl_1
+				remove_country_modifier = hva_trade_empire_lvl_2
+				remove_country_modifier = hva_trade_empire_lvl_3
+			}
+			add_country_modifier = {
+				name = hva_trade_empire_lvl_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 1000}
+				NOT = {HVA = {total_development = 1500}}
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_trade_empire_lvl_1
+				remove_country_modifier = hva_trade_empire_lvl_2
+				remove_country_modifier = hva_trade_empire_lvl_3
+				remove_country_modifier = hva_trade_empire_lvl_4
+			}
+			add_country_modifier = {
+				name = hva_trade_empire_lvl_5
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 1500}
+				NOT = {HVA = {total_development = 2000}}
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_trade_empire_lvl_1
+				remove_country_modifier = hva_trade_empire_lvl_2
+				remove_country_modifier = hva_trade_empire_lvl_3
+				remove_country_modifier = hva_trade_empire_lvl_4
+				remove_country_modifier = hva_trade_empire_lvl_5
+			}
+			add_country_modifier = {
+				name = hva_trade_empire_lvl_6
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 2000}
+				NOT = {HVA = {total_development = 3000}}
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_trade_empire_lvl_1
+				remove_country_modifier = hva_trade_empire_lvl_2
+				remove_country_modifier = hva_trade_empire_lvl_3
+				remove_country_modifier = hva_trade_empire_lvl_4
+				remove_country_modifier = hva_trade_empire_lvl_5
+				remove_country_modifier = hva_trade_empire_lvl_6
+			}
+			add_country_modifier = {
+				name = hva_trade_empire_lvl_7
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 3000}
+
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_trade_empire_lvl_1
+				remove_country_modifier = hva_trade_empire_lvl_2
+				remove_country_modifier = hva_trade_empire_lvl_3
+				remove_country_modifier = hva_trade_empire_lvl_4
+				remove_country_modifier = hva_trade_empire_lvl_5
+				remove_country_modifier = hva_trade_empire_lvl_6
+				remove_country_modifier = hva_trade_empire_lvl_7
+			}
+			add_country_modifier = {
+				name = hva_trade_empire_lvl_8
+				duration = -1
+			}
+		}
+		else = {
+
+		}
 	}
 }

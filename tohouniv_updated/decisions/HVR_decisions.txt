@@ -24,6 +24,32 @@ country_decisions = {
 
 		ai_importance = 50
 	}
+
+	hvr_receive_profits_from_heavenly_state = {
+		color = { 225 235 52 }
+		major = yes
+		potential = {
+			has_country_flag = hvr_trade_company_established		
+		}
+
+		allow = {
+			HVA = {
+				is_subject_of = ROOT
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = flavor_hvr.150
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		ai_importance = 50
+	}
 	
 
 	hvr_recruit_iku_admiral = {

@@ -3562,11 +3562,11 @@ MMU_ideas = {
 
 HVA_ideas = {
 	start = {
-		may_establish_frontier = yes
+		colonists = 1
 		colony_development_boost = 1
 	}
 	bonus = {
-		global_naval_engagement_modifier = 0.2
+		may_establish_frontier = yes
 	}
 	trigger = {
 		tag = HVA
@@ -3584,7 +3584,8 @@ HVA_ideas = {
 		global_trade_goods_size_modifier = 0.2
 	}
 	HVA_Free_Thinkers_of_New_Land = {
-		technology_cost = -0.1
+		idea_cost = -0.1
+		innovativeness_gain = 0.25
 	}
 	HVA_New_Trade_Center = {
 		trade_efficiency = 0.2

@@ -1675,6 +1675,28 @@ jnk_grace_of_goddess_of_vengeance = {
 
 #Heavenly Realm event modifiers
 
+hva_military_empire_lvl_1 = {
+	sailor_maintenance_modifer = -0.1
+}
+
+hva_military_empire_lvl_2 = {
+	sailor_maintenance_modifer = -0.2
+	global_ship_recruit_speed = -0.2
+}
+
+hva_military_empire_lvl_3 = {
+	global_ship_recruit_speed = -0.2
+	sailor_maintenance_modifer = -0.2
+	allowed_marine_fraction = 0.5
+}
+
+hva_military_empire_lvl_4 = {
+	global_ship_recruit_speed = -0.2
+	sailor_maintenance_modifer = -0.2
+	allowed_marine_fraction = 0.5
+	global_naval_engagement_modifier = 0.1
+}
+
 hva_trade_empire_lvl_1 = {
 	merchants = 2
 	global_trade_power = 0.1

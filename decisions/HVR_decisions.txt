@@ -50,6 +50,32 @@ country_decisions = {
 
 		ai_importance = 50
 	}
+
+	hvr_receive_profits_from_heavenly_militarized_state = {
+		color = { 27 145 247 }
+		major = yes
+		potential = {
+			has_country_flag = hvr_military_company_established	
+		}
+
+		allow = {
+			HVA = {
+				is_subject_of = ROOT
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = flavor_hvr.151
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		ai_importance = 50
+	}
 	
 
 	hvr_recruit_iku_admiral = {

@@ -1085,7 +1085,7 @@ country_event = {   #Rare materials in California
 country_event = {   #Rare materials in California part 2
 	id = flavor_hvr.26
 	title = flavor_hvr.26.t
-	picture = NITORI_GADGET_eventPicture
+	picture = NEWCONTINENT_eventPicture
 	desc = flavor_hvr.26.desc
 	is_triggered_only = yes
 
@@ -1342,6 +1342,7 @@ country_event = {   #Select subject type for HVA
 				subject = HVA
 			}
 		}
+		set_country_flag = hvr_military_company_established	
 		HVA = {
 			add_country_modifier = {
 				name = hva_military_focused_country
@@ -1558,13 +1559,14 @@ country_event = {   #Completed contruction
 country_event = {   #Deal with Oni
 	id = flavor_hvr.31
 	title = flavor_hvr.31.t
-	picture = NITORI_GADGET_eventPicture
+	picture = SUIKAWIN_eventPicture
 	desc = flavor_hvr.31.desc
 	is_triggered_only = yes
 
 	option = {	 # Deal with Oni using laws
 	name = flavor_hvr.31.a
 		add_adm_power = -100
+		add_years_of_income = -0.2
 		add_prestige = -25
 		5031 = {
 			add_local_autonomy = -50
@@ -1596,7 +1598,7 @@ country_event = {   #Deal with Oni
 	name = flavor_hvr.31.c
 		add_adm_power = -100
 		add_mil_power = -100
-		add_years_of_income = -0.4
+		add_years_of_income = -0.5
 		th_unlock_mercenary_company = {
 			mercenary_company = merc_th_wild_oni_from_heaven
 			free_merc = yes
@@ -1615,7 +1617,7 @@ country_event = {   #Deal with Oni
 country_event = {   #Visit from Shinigami
 	id = flavor_hvr.32
 	title = flavor_hvr.32.t
-	picture = NITORI_GADGET_eventPicture
+	picture = KOMACHI_VISIT_eventPicture
 	desc = flavor_hvr.32.desc
 
 
@@ -2585,7 +2587,7 @@ country_event = {  # Armageddon
 }
 
 
-country_event = {  # Armageddon
+country_event = {  # Receive benefits from Trade company in America
 	id = flavor_hvr.150
 	title = flavor_hvr.150.t
 	picture = TENSHI_eventPicture
@@ -2719,6 +2721,70 @@ country_event = {  # Armageddon
 		}
 		else = {
 
+		}
+	}
+}
+
+country_event = {  # Naval benefits
+	id = flavor_hvr.151
+	title = flavor_hvr.151.t
+	picture = TenshiReturn_eventPicture
+	desc = flavor_hvr.151.desc
+	is_triggered_only = yes
+
+	
+	option = { 
+		name = flavor_hvr.151.a
+		if = {
+			limit = {
+				HVA = {total_development = 500}
+				NOT = {HVA = {total_development = 1000}}
+			}
+			add_country_modifier = {
+				name = hva_military_empire_lvl_1
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 1000}
+				NOT = {HVA = {total_development = 1500}}
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_military_empire_lvl_1
+			}
+			add_country_modifier = {
+				name = hva_military_empire_lvl_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 1500}
+				NOT = {HVA = {total_development = 2000}}
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_military_empire_lvl_1
+				remove_country_modifier = hva_military_empire_lvl_2
+			}
+			add_country_modifier = {
+				name = hva_military_empire_lvl_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				HVA = {total_development = 2000}
+			}
+			hidden_effect = {
+				remove_country_modifier = hva_military_empire_lvl_1
+				remove_country_modifier = hva_military_empire_lvl_2
+				remove_country_modifier = hva_military_empire_lvl_3
+			}
+			add_country_modifier = {
+				name = hva_military_empire_lvl_4
+				duration = -1
+			}
 		}
 	}
 }

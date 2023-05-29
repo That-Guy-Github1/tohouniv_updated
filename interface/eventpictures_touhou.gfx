@@ -1653,6 +1653,12 @@ spriteTypes = {
 		allwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "KOMACHI_VISIT_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/KOMACHI_VISIT_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
 
 	
 	spriteType = {

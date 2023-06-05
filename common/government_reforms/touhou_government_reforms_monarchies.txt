@@ -2151,6 +2151,50 @@ Gensokyan_ran_monarchy = {
 	}
 }
 
+Gensokyan_hakutaku_monarchy = {
+	lock_level_when_selected = yes
+	icon = "hakutaku_monarchy_reform"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			tag = KNE
+			tag = KN2
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = Gensokyan_hakutaku_monarchy
+			}
+		}
+	}
+	#legacy_equivalent = Gensokyan_hakutaku_monarchy
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		cav_to_inf_ratio = 0.25
+		tolerance_heathen = 1
+		tolerance_own = 2
+		tolerance_heretic = 1
+		num_accepted_cultures = 5
+		global_autonomy = -0.05
+		governing_capacity = 300
+		harmonization_speed = 0.2
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		enables_horde_idea_group = yes
+		has_tributaries = yes
+		th_enforce_tributaries = yes
+		th_hakutaku_swap = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+	}
+		raze_province = yes
+	
+}
+
 Gensokyan_jnk_chinese_divine_state = {
 	allow_normal_conversion = no
 	lock_level_when_selected = yes

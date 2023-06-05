@@ -1863,6 +1863,7 @@ hvr_keystones_modifier = {
 
 hvr_keystones_for_marines_modifier = {
 	movement_speed = 0.2
+	landing_penalty = -1
 	regiment_disembark_speed = 0.25
 	is_marine_modifier = yes
 }

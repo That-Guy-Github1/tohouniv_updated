@@ -2026,6 +2026,7 @@ hvr_slot4_branch = {
 		} 
 
 		effect = {
+			custom_tooltip = hvr_duel_with_yukari_help_ct
 			if = {
 				limit = {
 					exists = MHG
@@ -2557,7 +2558,10 @@ hvr_slot5_branch = {
 		icon = mission_touhou_empress_eiki
 		position = 11
 		required_missions = { HVR_dont_fear_the_reaper }
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 4983
+			NOT = {controlled_by = ROOT}
+		 } 
 
 		trigger = { 
 			OR = {
@@ -2570,11 +2574,23 @@ hvr_slot5_branch = {
 						}
 					}
 				}
-				is_in_war = {
-					attacker_leader = ROOT
-					defender_leader = HIG
-					war_score = 30
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = hvr_tenshi_on_throne_tt
+						has_ruler_flag = th_original_tenshi
+					}
+					HIG = {
+						4983 = {
+							controlled_by = ROOT
+						}
+					}
+					is_in_war = {
+						attacker_leader = ROOT
+						defender_leader = HIG
+						war_score = 30
+					}
 				}
+
 				NOT = {exists = HIG}
 			}
 		} 
@@ -2605,7 +2621,7 @@ hvr_slot5_branch = {
 						}
 					}
 					country_event = {
-						id = flavor_hvr.35
+						id = flavor_hvr.48
 					}
 				}
 				else = {

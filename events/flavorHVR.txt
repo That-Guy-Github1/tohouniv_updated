@@ -897,9 +897,10 @@ country_event = {   #Killing Yukari
 		}
 		add_prestige_or_monarch_power = { amount = 100 }
 		add_power_projection = {
-			type = mission_rewards_power_projection
-			amount = 50
+			type = hvr_beaten_yukari_pp
+			amount = 10
 		}
+		custom_tooltip = th_permanent_power_projection_tooltip
 	}
 }
 
@@ -1648,12 +1649,13 @@ country_event = {   #Visit from Shinigami
 country_event = {   #Deal with Shinigami
 	id = flavor_hvr.33
 	title = flavor_hvr.33.t
-	picture = NITORI_GADGET_eventPicture
+	picture = EIKIJUDGE_eventPicture
 	desc = flavor_hvr.33.desc
 	is_triggered_only = yes
 
 	option = {	 ## War
 	name = flavor_hvr.33.a
+	add_prestige = 10
 		if = {
 			limit = {
 				exists = HIG
@@ -1682,7 +1684,7 @@ country_event = {   #Deal with Shinigami
 country_event = {   #Dealt with Eiki via bribe
 	id = flavor_hvr.34
 	title = flavor_hvr.34.t
-	picture = NITORI_GADGET_eventPicture
+	picture = EIKI_eventPicture
 	desc = flavor_hvr.34.desc
 	is_triggered_only = yes
 
@@ -1692,7 +1694,7 @@ country_event = {   #Dealt with Eiki via bribe
 			clr_country_flag = hvr_shinigami_is_active
 			set_country_flag = hvr_agent_aya_activated  ### WELLL WELL WELL. WHAT DO WE HAVE HERE? CORRUPT YAMA? THAT WILL MAKE A GREAT ARTICLE!
 		}
-		add_treasury = -500
+		add_treasury = -1000
 		HIG = {
 			country_event = {
 				id = flavor_hvr.37
@@ -1702,10 +1704,10 @@ country_event = {   #Dealt with Eiki via bribe
 	}
 }
 
-country_event = {   #Dealt with Eiki via war
+country_event = {   #Won duel against Eiki
 	id = flavor_hvr.35
 	title = flavor_hvr.35.t
-	picture = NITORI_GADGET_eventPicture
+	picture = EIKI_eventPicture
 	desc = flavor_hvr.35.desc
 	is_triggered_only = yes
 
@@ -1716,11 +1718,12 @@ country_event = {   #Dealt with Eiki via war
 	}		
 		add_treasury = 500
 		add_power_projection = {
-			type = mission_rewards_power_projection
-			amount = 50
+			type = hvr_beaten_eiki_pp
+			amount = 10
 		}
-		add_mil_power = 200
-		add_dip_power = 200
+		custom_tooltip = th_permanent_power_projection_tooltip
+		add_mil_power = 300
+		add_dip_power = 300
 		HIG = {
 			country_event = {
 				id = flavor_hvr.38
@@ -1732,7 +1735,7 @@ country_event = {   #Dealt with Eiki via war
 country_event = {   #Higan no longer exists for some reason
 	id = flavor_hvr.36
 	title = flavor_hvr.36.t
-	picture = NITORI_GADGET_eventPicture
+	picture = EIKI_eventPicture
 	desc = flavor_hvr.36.desc
 	is_triggered_only = yes
 
@@ -1748,22 +1751,22 @@ country_event = {   #Higan no longer exists for some reason
 country_event = {   # Higan receives money from Tenshi
 	id = flavor_hvr.37
 	title = flavor_hvr.37.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_eventPicture
 	desc = flavor_hvr.37.desc
 	is_triggered_only = yes
 
 	option = {	 
 	name = flavor_hvr.37.a
-		add_corruption = 1
+		add_corruption = 2
 		add_prestige = 10
-		add_treasury = 500
+		add_treasury = 1000
 	}
 }
 
 country_event = {   # Higan receives punch in the face from Tenshi
 	id = flavor_hvr.38
 	title = flavor_hvr.38.t
-	picture = NITORI_GADGET_eventPicture
+	picture = TENSHI_earthquake_eventPicture
 	desc = flavor_hvr.38.desc
 	is_triggered_only = yes
 
@@ -1782,10 +1785,10 @@ country_event = {   # Higan receives punch in the face from Tenshi
 	}
 }
 
-country_event = {   #Aya wants to have interview
+country_event = {   #Aya wants to have interview... hehe.
 	id = flavor_hvr.39
 	title = flavor_hvr.39.t
-	picture = NITORI_GADGET_eventPicture
+	picture = AYAPAPERNEWS_eventPicture
 	desc = flavor_hvr.39.desc
 
 	fire_only_once = yes
@@ -1793,58 +1796,63 @@ country_event = {   #Aya wants to have interview
 		has_country_flag = hvr_agent_aya_activated
 	}
 	mean_time_to_happen = {
-		months = 1
+		months = 2
 	}
 	option = {	 ##give interview to Aya
 	name = flavor_hvr.39.a
-		add_years_of_income = 0.2
+		set_country_flag = hvr_learned_from_aya
+		custom_tooltip = hvr_learned_from_aya_ct
+		add_years_of_income = 0.3
 		TGU = {
-			add_splendor = 200
+			add_splendor = 400
 		}
 		hidden_effect = {
-			HVR = {
-				country_event = {
-					id = flavor_hvr.40
-					days = 30
+			every_known_country = {
+				limit = {
+					ai = no
+					knows_country = ROOT
 				}
-			}
-			HIG = {
 				country_event = {
 					id = flavor_hvr.40
-					days = 30
-				}
-			}
-			TGU = {
-				country_event = {
-					id = flavor_hvr.40
-					days = 30
+					days = 65
 				}
 			}
 		}
 	}
 	option = {	 ##refuse to give interview to Aya
 	name = flavor_hvr.39.b
-		add_prestige = 5
+		add_prestige = 25
 	}
 }
 
 country_event = {   #Aya brings GREAT NEWS ABOUT HIGAN
 	id = flavor_hvr.40
 	title = flavor_hvr.40.t
-	picture = NITORI_GADGET_eventPicture
+	picture = EIKI_CORRUPTION_eventPicture
 	desc = flavor_hvr.40.desc
 	is_triggered_only = yes
-	major = yes
 
 
 	option = {	 
 	name = flavor_hvr.40.a
+	if = {
+		limit = {
+			NOT = {has_country_modifier = hvr_good_news_for_aya}
+		}
+		TGU = {
+			add_country_modifier = {
+				name = hvr_good_news_for_aya
+				duration = 3650
+			}
+		}
+
+	}	
 		if = {
 			limit = {
 				NOT = {has_country_modifier = hvr_bad_news_for_higan}
 			}
 			HIG = {
-				add_corruption = 2
+				add_corruption = 5
 				add_country_modifier = {
 					name = hvr_bad_news_for_higan
 					duration = 3650
@@ -1858,7 +1866,7 @@ country_event = {   #Aya brings GREAT NEWS ABOUT HIGAN
 country_event = {   #Open up Casino
 	id = flavor_hvr.41
 	title = flavor_hvr.41.t
-	picture = NITORI_GADGET_eventPicture
+	picture = YUYUKOGOLD_eventPicture
 	desc = flavor_hvr.41.desc
 	is_triggered_only = yes
 
@@ -2067,7 +2075,7 @@ country_event = {   #Duel with Yukari
 			#Yukari base fight skills
 			set_variable = {
 				which = th_yukari_combat_skills
-				value = 1800
+				value = 1850
 			}
 			#'Desperate' Fighting Skills
 			th_defineopponent_fighting_skill = {
@@ -2134,6 +2142,115 @@ country_event = {   #Lost to Yukari
 			amount = -10
 		}
 		MHG = {
+			limit = {
+				is_in_war = {
+				attacker_leader = ROOT
+				}
+			}
+			white_peace = ROOT
+		}
+	}
+}
+
+country_event = {   #Duel with Eiki
+	id = flavor_hvr.48
+	title = flavor_hvr.48.t
+	picture = EIKIBOSS_eventPicture
+	desc = flavor_hvr.48.desc
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_ruler_flag = th_original_tenshi
+				}
+				th_getruler_fighting_skill = {
+					skill_boni = 700
+					type = normal
+				}
+			}
+			else = {
+				th_getruler_fighting_skill = {
+					skill_boni = 0
+					type = normal
+				}
+			}
+			#Yukari base fight skills
+			set_variable = {
+				which = th_eiki_combat_skills
+				value = 1850
+			}
+			#'Desperate' Fighting Skills
+			th_defineopponent_fighting_skill = {
+				variable = th_eiki_combat_skills
+				type = normal
+			}	
+		}
+	}
+	
+	option = {	
+	name = flavor_hvr.48.a
+		th_danmaku_normal_fight_ruler_and_opponent = {
+			win_event = flavor_hvr.35 
+			draw_event = flavor_hvr.49
+			defeat_event = flavor_hvr.50
+			days = 5
+		}	
+	
+		ai_chance = { 
+			factor = 1
+		}
+	}
+}
+
+country_event = {   #Draw to Eiki
+	id = flavor_hvr.49
+	title = flavor_hvr.49.t
+	picture = EIKI_eventPicture
+	desc = flavor_hvr.49.desc
+	is_triggered_only = yes
+	major = yes
+	option = {	
+	name = flavor_hvr.49.a
+	hidden_effect = {
+		clr_country_flag = hvr_shinigami_is_active
+	}	
+		add_mil_power = 100
+		add_prestige_or_monarch_power = { amount = 50 }
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+		HIG = {
+			limit = {
+				is_in_war = {
+				attacker_leader = ROOT
+				}
+			}
+			white_peace = ROOT
+		}
+	}
+}
+
+country_event = {   #Lost to Eiki
+	id = flavor_hvr.50
+	title = flavor_hvr.50.t
+	picture = EIKIBOSS_eventPicture
+	desc = flavor_hvr.50.desc
+	is_triggered_only = yes
+	major = yes
+	option = {	
+	name = flavor_hvr.50.a
+	hidden_effect = {
+		clr_country_flag = hvr_shinigami_is_active
+	}	
+		add_prestige = -25
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = -10
+		}
+		HIG = {
 			limit = {
 				is_in_war = {
 				attacker_leader = ROOT
@@ -2546,6 +2663,23 @@ country_event = {  # Let your enemies taste Hurricane!
 		name = flavor_hvr.108.a
 			add_country_modifier = {
 				name = hvr_hurricane
+				duration = 1850
+			}
+	}
+}
+
+country_event = {  # Let your enemies taste Tornado!
+	id = flavor_hvr.111
+	title = flavor_hvr.111.t
+	picture = Touhou_Hurricane_eventPicture
+	desc = flavor_hvr.111.desc
+	is_triggered_only = yes
+
+	
+	option = { 
+		name = flavor_hvr.111.a
+			add_country_modifier = {
+				name = hvr_tornado
 				duration = 1850
 			}
 	}

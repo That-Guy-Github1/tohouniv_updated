@@ -1665,6 +1665,13 @@ spriteTypes = {
 		allwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "EIKI_CORRUPTION_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/EIKI_CORRUPTION_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+
 
 	
 	spriteType = {

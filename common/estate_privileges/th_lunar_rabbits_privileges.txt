@@ -219,7 +219,8 @@ th_estate_lunar_rabbits_send_general = {
 	}
 	benefits = {
 		infantry_power = 0.15
-		army_tradition_decay = -0.005
+		discipline = 0.025
+		army_tradition_decay = -0.01
 	}
 
 	ai_will_do = {

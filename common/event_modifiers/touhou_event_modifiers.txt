@@ -1675,6 +1675,11 @@ jnk_grace_of_goddess_of_vengeance = {
 
 #Heavenly Realm event modifiers
 
+hvr_good_news_for_aya = {
+	global_tax_income = 60
+	prestige = 3
+}
+
 hva_military_empire_lvl_1 = {
 	sailor_maintenance_modifer = -0.1
 }
@@ -2011,9 +2016,13 @@ hvr_experiment_with_electricity_lvl_2 = {			#Unlocked at the end of MT
 }
 
 
-hvr_hurricane = {							#UNLOCKED on mission hvr_mastery_over_nature
-	global_monthly_devastation = 0.1
-	war_exhaustion = 0.1 
+hvr_hurricane = {							#UNLOCKED on mission hvr_mastery_over_nature + bribing Eiki + giving interview to Aya
+	global_monthly_devastation = 0.15
+	war_exhaustion = 0.15 
+}
+
+hvr_tornado = {							#UNLOCKED on mission hvr_mastery_over_nature
+	war_exhaustion = 0.1
 }
 
 hvr_rainbow = {								#UNLOCKED on mission hvr_mastery_over_nature

@@ -1785,7 +1785,7 @@ hvr_favor_from_miko = {
 
 hvr_integrate_heretics = {
 	global_heretic_missionary_strength = 0.06
-	global_unrest = -1
+	missionaries = 1
 }
 
 hvr_making_heaven_out_of_hell = {
@@ -1845,10 +1845,6 @@ conversion_zeal_v2 = {
 	global_missionary_strength = 0.1
 }
 
-hvr_powerful_establishment_in_america = {
-	global_trade_power = 0.25
-	merchants = 2
-}
 
 hvr_stolen_man_of_war = {
 	has_man_of_war = yes

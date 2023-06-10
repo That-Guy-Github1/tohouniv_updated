@@ -1055,7 +1055,7 @@ country_event = {   #Begin Expedition
 	}
 	option = {	
 		name = flavor_hvr.24.d
-		add_years_of_income = -1.6
+		add_years_of_income = -2
 		add_manpower = -25
 		add_country_modifier = {
 			name = hvr_expedition_lvl_4
@@ -1757,7 +1757,6 @@ country_event = {   # Higan receives money from Tenshi
 
 	option = {	 
 	name = flavor_hvr.37.a
-		add_corruption = 2
 		add_prestige = 10
 		add_treasury = 1000
 	}
@@ -1875,6 +1874,7 @@ country_event = {   #Open up Casino
 	name = flavor_hvr.41.a
 	if = {
 		limit = { has_dlc = "Leviathan" }
+		add_treasury = -250
 		5313 = {
 			change_province_name = "Gambling Halls"
 			hidden_effect = {
@@ -1906,7 +1906,7 @@ country_event = {   #Open up Casino
 country_event = {   #Open up Resort
 	id = flavor_hvr.42
 	title = flavor_hvr.42.t
-	picture = NITORI_GADGET_eventPicture
+	picture = RESORT_PARADISE_eventPicture
 	desc = flavor_hvr.42.desc
 	is_triggered_only = yes
 
@@ -1984,7 +1984,7 @@ country_event = {   #### Convert everyone to our religion
 	id = flavor_hvr.43
 	title = flavor_hvr.43.t
 	picture = TENSHI_ANGEL_eventPicture
-	desc = flavor_hvr.20.desc
+	desc = flavor_hvr.43.desc
 	is_triggered_only = yes
 
 	name = flavor_hvr.43.a

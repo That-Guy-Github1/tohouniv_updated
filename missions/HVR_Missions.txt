@@ -797,6 +797,12 @@ hvr_slot2_branch = {
 					tag = ROOT
 				}
 			}
+			5202 = {
+				owned_by = ROOT
+				th_has_up_to_date_fort_building = {
+					tag = ROOT
+				}
+			}
 		 } 
 
 		effect = { 
@@ -843,6 +849,27 @@ hvr_slot2_branch = {
 				}
 			}
 			5214 = { 
+				if = {
+					limit = { has_building = fort_17th }
+					remove_building = fort_17th
+					add_building = fort_18th
+				}
+				else_if = {
+					limit = { has_building = fort_16th }
+					remove_building = fort_16th
+					add_building = fort_17th
+				}
+				else_if = {
+					limit = { has_building = fort_15th }
+					remove_building = fort_15th
+					add_building = fort_16th
+				}
+				add_province_modifier = { 
+					name = hvr_fortified_hell
+					duration = -1
+				}
+			}
+			5202 = { 
 				if = {
 					limit = { has_building = fort_17th }
 					remove_building = fort_17th
@@ -999,7 +1026,7 @@ hvr_slot2_branch = {
 
 		effect = { 
 			country_event = {
-			id = flavor_hvr.4
+			id = flavor_hvr.51
 			} 
 		} 
 	}
@@ -1519,8 +1546,15 @@ hvr_slot3_branch = {
 		required_missions = { HVR_blood_and_thunder }
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			num_of_heavy_ship = 100
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = hvr_less_heavy_ships_than_us_ct
+				NOT = {
+					any_known_country = {
+							num_of_heavy_ship = ROOT
+						}
+					}
+				}
 			OR = {
 				navy_tradition = 90
 				full_idea_group = maritime_ideas

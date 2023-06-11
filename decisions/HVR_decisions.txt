@@ -89,7 +89,16 @@ country_decisions = {
 			owns_core_province = 5312
 			AND = {
 				NOT = { has_leader = "Iku Nagae" }
-				NOT = { has_country_flag = th_hired_advisor_iku }	
+				custom_trigger_tooltip = {
+					tooltip = th_no_iku_advisor
+					OR = {
+						had_country_flag = {
+							flag = th_hired_advisor_iku
+							days = 7300
+						}
+						NOT = { has_country_flag = th_hired_advisor_iku }
+					}
+				}
 			}	
 		}
 
@@ -179,7 +188,16 @@ country_decisions = {
 			owns_core_province = 5312
 			AND = {
 				NOT = { has_leader = "Iku Nagae" }
-				NOT = { has_country_flag = th_hired_advisor_iku }	
+				custom_trigger_tooltip = {
+					tooltip = th_no_iku_advisor
+					OR = {
+						had_country_flag = {
+							flag = th_hired_advisor_iku
+							days = 7300
+						}
+						NOT = { has_country_flag = th_hired_advisor_iku }
+					}
+				}
 			}	
 		}
 

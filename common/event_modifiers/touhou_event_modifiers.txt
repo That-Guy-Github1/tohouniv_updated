@@ -1675,6 +1675,10 @@ jnk_grace_of_goddess_of_vengeance = {
 
 #Heavenly Realm event modifiers
 
+hva_free_colony = {
+	colony_cost_modifier = -0.95
+}
+
 hvr_good_news_for_aya = {
 	global_tax_income = 60
 	prestige = 3
@@ -1799,22 +1803,24 @@ hvr_beaten_old_hag = {
 
 hvr_expedition_lvl_1 = {
 	colonists = 1
-	global_colonial_growth = 25
+	global_colonial_growth = 40
 }
 
 hvr_expedition_lvl_2 = {
 	colonists = 1
-	global_colonial_growth = 50
+	global_colonial_growth = 70
 }
 
 hvr_expedition_lvl_3 = {
 	colonists = 1
 	global_colonial_growth = 100
+	global_manpower_modifier = -0.1
 }
 
 hvr_expedition_lvl_4 = {
 	colonists = 2
 	global_colonial_growth = 100
+	global_manpower_modifier = -0.2
 }
 
 hvr_additional_expedition_force = {
@@ -1865,7 +1871,7 @@ hvr_keystones_modifier = {
 hvr_keystones_for_marines_modifier = {
 	movement_speed = 0.2
 	landing_penalty = -1
-	regiment_disembark_speed = 0.25
+	regiment_disembark_speed = 0.50
 	is_marine_modifier = yes
 }
 

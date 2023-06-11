@@ -1285,6 +1285,7 @@ country_decisions = {
 	}
 
 	hvr_call_yorihime = {
+		color = {  219 156 254  }
 		potential = {
 			th_has_unlocked_advisor = {
 				advisor = th_advisor_yorihime
@@ -1333,6 +1334,7 @@ country_decisions = {
 	}
 
 	hvr_call_iku = {
+		color = { 144 45 199 }
 		potential = {
 			th_has_unlocked_advisor = {
 				advisor = th_advisor_iku

@@ -129,29 +129,30 @@ country_event = {   #Release Shion from Reimu
 			limit = {
 				NOT = { exists = SHI }	
 			}
-			release = SHI
+
 			5041 = {
-				cede_province = SHI
 				add_core = SHI
+				remove_core = ROOT
 				change_religion = ROOT
 			}
 			5060 = {
-				cede_province = SHI
 				add_core = SHI
+				remove_core = ROOT
 				change_religion = ROOT
 			}
 			5061 = {
-				cede_province = SHI
 				add_core = SHI
+				remove_core = ROOT
 				change_religion = ROOT
 			}
 			5062 = {
-				cede_province = SHI
 				add_core = SHI
+				remove_core = ROOT
 				change_religion = ROOT
 			}
+			release = SHI
 			SHI = {
-				add_historical_friend = HVR
+				add_historical_friend = ROOT
 				hidden_effect = {
 					change_government = monarchy
 					add_government_reform = Gensokyan_divine_state
@@ -325,8 +326,8 @@ country_event = {   #Release Greece vassal
 			GRE = {
 				change_government = monarchy
 				add_government_reform = feudalism_reform
-				add_historical_friend = HVR
-				adopt_reform_progress = HVR
+				add_historical_friend = ROOT
+				adopt_reform_progress = ROOT
 				hidden_effect = {
 					change_religion = ROOT
 					add_adm_power = 112
@@ -341,6 +342,48 @@ country_event = {   #Release Greece vassal
 						add_base_production = 4
 						add_base_tax = 4
 					}
+
+					add_idea_group = offensive_ideas
+					add_idea = bayonet_leaders
+					add_idea = national_conscripts
+					add_idea = superior_firepower
+					add_idea = glorious_arms
+					add_idea = engineer_corps
+					add_idea = grand_army
+					add_idea = napoleonic_warfare
+					add_idea_group = quality_ideas
+					add_idea = private_to_marshal
+					add_idea = quality_education
+					add_idea = finest_of_horses
+					add_idea = escort_ships
+					add_idea = naval_drill 
+					add_idea = copper_bottoms
+					add_idea = massed_battery
+					add_idea_group = trade_ideas
+					add_idea = shrewd_commerce_practise
+					add_idea = free_trade
+					add_idea = merchant_adventures
+					add_idea = national_trade_policy
+					add_idea = overseas_merchants
+					add_idea = trade_manipulation
+					add_idea = fast_negotiations
+					add_idea_group = economic_ideas
+					add_idea = bureaucracy
+					add_idea = national_bank
+					add_idea = smithian_economics
+					add_idea = efficient_mining
+					add_idea = nationalistic_enthusiasm
+					add_idea = debt_and_loans
+					add_idea = merchant_passes
+					add_idea_group = religious_ideas
+					add_idea = missionary_schools
+					add_idea = church_attendance_duty
+					add_idea = divine_supremacy
+					add_idea = devoutness
+					add_idea = inquisition
+					add_idea = religious_tradition
+					add_idea = deus_vult
+
 					change_estate_land_share = {
 						estate = estate_church
 						share = 20
@@ -389,7 +432,11 @@ country_event = {   #Offer for Lunarians to make PU
 			}
 		}
 		ai_chance = {
-			factor = 60
+			factor = 70
+			modifier = {
+				factor = 0
+				total_development = 350
+			}
 		}
 	}
 
@@ -407,7 +454,7 @@ country_event = {   #Offer for Lunarians to make PU
 		}
 		add_prestige_or_monarch_power = { amount = 50 }
 		ai_chance = { 
-			factor = 40 
+			factor = 30 
 		}
 	}
 
@@ -426,6 +473,18 @@ country_event = {   #Offer accepted
 		create_subject = {
 			subject_type = personal_union
 			subject = LCU
+		}
+		hidden_effect = {
+			LCU = {
+				country_event = {
+					id = touhou_events.1
+				}
+				country_event = {
+					id = TH_lunarian_events.1
+					days = 1
+				}
+
+			}
 		}	
 	}
 }
@@ -779,7 +838,8 @@ country_event = {   #Release Novgorod vassal
 			NOV = {
 				change_government = monarchy
 				add_government_reform = feudalism_reform
-				add_historical_friend = HVR
+				adopt_reform_progress = ROOT
+				add_historical_friend = ROOT
 				hidden_effect = {
 					change_religion = ROOT
 					add_adm_power = 112
@@ -789,12 +849,53 @@ country_event = {   #Release Novgorod vassal
 					add_treasury = 325
 					add_prestige = 25
 					set_capital = 310
-					adopt_reform_progress = HVR
 					310 = {
 						add_base_manpower = 4
 						add_base_production = 4
 						add_base_tax = 4
 					}
+
+					add_idea_group = plutocracy_ideas
+					add_idea = tradition_of_payment
+					add_idea = abolished_serfdom
+					add_idea = bill_of_rights
+					add_idea = free_merchants
+					add_idea = free_subjects
+					add_idea = free_cities
+					add_idea = emancipation
+					add_idea_group = quality_ideas
+					add_idea = private_to_marshal
+					add_idea = quality_education
+					add_idea = finest_of_horses
+					add_idea = escort_ships
+					add_idea = naval_drill 
+					add_idea = copper_bottoms
+					add_idea = massed_battery
+					add_idea_group = trade_ideas
+					add_idea = shrewd_commerce_practise
+					add_idea = free_trade
+					add_idea = merchant_adventures
+					add_idea = national_trade_policy
+					add_idea = overseas_merchants
+					add_idea = trade_manipulation
+					add_idea = fast_negotiations
+					add_idea_group = economic_ideas
+					add_idea = bureaucracy
+					add_idea = national_bank
+					add_idea = smithian_economics
+					add_idea = efficient_mining
+					add_idea = nationalistic_enthusiasm
+					add_idea = debt_and_loans
+					add_idea = merchant_passes
+					add_idea_group = religious_ideas
+					add_idea = missionary_schools
+					add_idea = church_attendance_duty
+					add_idea = divine_supremacy
+					add_idea = devoutness
+					add_idea = inquisition
+					add_idea = religious_tradition
+					add_idea = deus_vult
+
 					change_estate_land_share = {
 						estate = estate_church
 						share = 20
@@ -969,7 +1070,8 @@ country_event = {   #Release Sapmi out of Sweden
 			SMI = {
 				change_government = monarchy
 				add_government_reform = feudalism_reform
-				add_historical_friend = HVR
+				add_historical_friend = ROOT
+				adopt_reform_progress = ROOT
 				hidden_effect = {
 					change_religion = ROOT
 					add_adm_power = 112
@@ -979,7 +1081,48 @@ country_event = {   #Release Sapmi out of Sweden
 					add_treasury = 325
 					add_prestige = 25
 					set_capital = 1
-					adopt_reform_progress = HVR
+
+					add_idea_group = offensive_ideas
+					add_idea = bayonet_leaders
+					add_idea = national_conscripts
+					add_idea = superior_firepower
+					add_idea = glorious_arms
+					add_idea = engineer_corps
+					add_idea = grand_army
+					add_idea = napoleonic_warfare
+					add_idea_group = quality_ideas
+					add_idea = private_to_marshal
+					add_idea = quality_education
+					add_idea = finest_of_horses
+					add_idea = escort_ships
+					add_idea = naval_drill 
+					add_idea = copper_bottoms
+					add_idea = massed_battery
+					add_idea_group = trade_ideas
+					add_idea = shrewd_commerce_practise
+					add_idea = free_trade
+					add_idea = merchant_adventures
+					add_idea = national_trade_policy
+					add_idea = overseas_merchants
+					add_idea = trade_manipulation
+					add_idea = fast_negotiations
+					add_idea_group = economic_ideas
+					add_idea = bureaucracy
+					add_idea = national_bank
+					add_idea = smithian_economics
+					add_idea = efficient_mining
+					add_idea = nationalistic_enthusiasm
+					add_idea = debt_and_loans
+					add_idea = merchant_passes
+					add_idea_group = religious_ideas
+					add_idea = missionary_schools
+					add_idea = church_attendance_duty
+					add_idea = divine_supremacy
+					add_idea = devoutness
+					add_idea = inquisition
+					add_idea = religious_tradition
+					add_idea = deus_vult
+
 					1 = {
 						add_base_manpower = 4
 						add_base_production = 4
@@ -1036,7 +1179,7 @@ country_event = {   #Begin Expedition
 
 	option = {	
 		name = flavor_hvr.24.b
-		add_years_of_income = -0.4
+		add_years_of_income = -0.5
 		add_manpower = -6
 		add_country_modifier = {
 			name = hvr_expedition_lvl_2
@@ -1161,10 +1304,14 @@ country_event = {   #Heavenly States of America
 	desc = flavor_hvr.27.desc
 	is_triggered_only = yes
 
+
 	option = {	
 	name = flavor_hvr.27.a
 	custom_tooltip = hvr_new_america_tooltip
+
+
 	hidden_effect = {
+		set_capital = 5032
 		country_event = {
 			id = flavor_hvr.28
 			days = 30
@@ -1175,7 +1322,7 @@ country_event = {   #Heavenly States of America
 			}
 			cede_province = HVA
 			add_core = HVA
-			remove_core = ROOT
+
 		}
 		central_america_superregion = {
 			limit = {
@@ -1183,7 +1330,7 @@ country_event = {   #Heavenly States of America
 			}
 			cede_province = HVA
 			add_core = HVA
-			remove_core = ROOT
+
 		}
 		4637 = {
 			add_core = HVA
@@ -1208,11 +1355,12 @@ country_event = {   #Heavenly States of America
 				add_accepted_culture = ROOT
 				change_religion = ROOT
 				add_historical_friend = ROOT
-				add_treasury = 400
-				add_adm_power = 200
-				add_dip_power = 200
-				add_mil_power = 200
+				add_treasury = 600
+				add_adm_power = 500
+				add_dip_power = 500
+				add_mil_power = 500
 				add_manpower = 30
+				set_capital = 4637
 				change_estate_land_share = {
 					estate = estate_church
 					share = 20
@@ -1235,6 +1383,32 @@ country_event = {   #Heavenly States of America
 						add_ruler_personality = immortal_personality
 					}
 				}
+
+				add_idea_group = exploration_ideas
+				add_idea = quest_for_the_new_world
+				add_idea = colonial_ventures
+				add_idea = overseas_exploration
+				add_idea = land_of_opportunity
+				add_idea = factories
+				add_idea = free_colonies
+				add_idea = global_empire
+				add_idea_group = quality_ideas
+				add_idea = private_to_marshal
+				add_idea = quality_education
+				add_idea = finest_of_horses
+				add_idea = escort_ships
+				add_idea = naval_drill 
+				add_idea = copper_bottoms
+				add_idea = massed_battery
+				add_idea_group = trade_ideas
+				add_idea = shrewd_commerce_practise
+				add_idea = free_trade
+				add_idea = merchant_adventures
+				add_idea = national_trade_policy
+				add_idea = overseas_merchants
+				add_idea = trade_manipulation
+				add_idea = fast_negotiations
+
 				east_china_sea_region = {
 					discover_country = HVA
 				}
@@ -1314,6 +1488,10 @@ country_event = {   #Heavenly States of America
 				add_permanent_claim = HVA 
 			}
 			HVA = {
+				add_country_modifier =  {
+					name = hva_free_colony
+					duration = 3650
+				}
 				add_country_modifier = {
 					name = hva_loyal_subject
 					duration = 36500
@@ -1568,7 +1746,7 @@ country_event = {   #Deal with Oni
 	name = flavor_hvr.31.a
 		add_adm_power = -100
 		add_years_of_income = -0.2
-		add_prestige = -25
+		add_prestige = -15
 		5031 = {
 			add_local_autonomy = -50
 			remove_province_modifier = hvr_controlled_by_oni
@@ -1599,7 +1777,7 @@ country_event = {   #Deal with Oni
 	name = flavor_hvr.31.c
 		add_adm_power = -100
 		add_mil_power = -100
-		add_years_of_income = -0.5
+		add_years_of_income = -0.6
 		th_unlock_mercenary_company = {
 			mercenary_company = merc_th_wild_oni_from_heaven
 			free_merc = yes
@@ -2261,6 +2439,80 @@ country_event = {   #Lost to Eiki
 	}
 }
 
+country_event = {   #Seize land for Shion
+	id = flavor_hvr.51
+	title = flavor_hvr.51.t
+	picture = SHION_eventPicture
+	desc = flavor_hvr.51.desc
+	is_triggered_only = yes
+	option = {	
+	name = flavor_hvr.51.a
+		5041 = {
+			cede_province = HVR
+			add_core = HVR
+			change_religion = ROOT
+		}
+		5060 = {
+			cede_province = HVR
+			add_core = HVR
+			change_religion = ROOT
+		}
+		5061 = {
+			cede_province = HVR
+			add_core = HVR
+			change_religion = ROOT
+		}
+		5062 = {
+			cede_province = HVR
+			add_core = HVR
+			change_religion = ROOT
+		}
+		country_event = {
+			id = flavor_hvr.4
+			days = 3
+		}
+	}
+}
+
+
+country_event = {   #Seize land for Shion
+	id = flavor_hvr.51
+	title = flavor_hvr.51.t
+	picture = SHION_eventPicture
+	desc = flavor_hvr.51.desc
+	is_triggered_only = yes
+	option = {	
+	name = flavor_hvr.51.a
+		5041 = {
+			cede_province = HVR
+			add_core = HVR
+			change_religion = ROOT
+		}
+		5060 = {
+			cede_province = HVR
+			add_core = HVR
+			change_religion = ROOT
+		}
+		5061 = {
+			cede_province = HVR
+			add_core = HVR
+			change_religion = ROOT
+		}
+		5062 = {
+			cede_province = HVR
+			add_core = HVR
+			change_religion = ROOT
+		}
+		country_event = {
+			id = flavor_hvr.4
+			days = 3
+		}
+	}
+}
+
+
+
+
 
 
 
@@ -2310,10 +2562,13 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 				name = hvr_heavy_rain
 				duration = 3650
 			}
-			change_variable = {
-				which = hvr_weather_action_counter
-				value = 1
+			hidden_effect = {
+				change_variable = {
+					which = hvr_weather_action_counter
+					value = 1
+				}
 			}
+
 			add_dip_power = -100
 		}
 		else_if = {
@@ -2326,9 +2581,11 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 				name = hvr_heavy_rain_lvl_2
 				duration = 3650
 			}
-			change_variable = {
-				which = hvr_weather_action_counter
-				value = 1
+			hidden_effect = {
+				change_variable = {
+					which = hvr_weather_action_counter
+					value = 1
+				}
 			}
 			add_dip_power = -100
 		}
@@ -2347,9 +2604,11 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 				name = hvr_terraforming 
 				duration = 3650
 			}
-			change_variable = {
-				which = hvr_weather_action_counter
-				value = 1
+			hidden_effect = {
+				change_variable = {
+					which = hvr_weather_action_counter
+					value = 1
+				}
 			}
 			random_owned_province = {
 				limit = {
@@ -2378,9 +2637,11 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 				name = hvr_terraforming_lvl_2 
 				duration = 3650
 			}
-			change_variable = {
-				which = hvr_weather_action_counter
-				value = 1
+			hidden_effect = {
+				change_variable = {
+					which = hvr_weather_action_counter
+					value = 1
+				}
 			}
 			random_owned_province = {
 				limit = {
@@ -2420,9 +2681,11 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 				name = hvr_experiment_with_electricity
 				duration = 3650
 			}
-			change_variable = {
-				which = hvr_weather_action_counter
-				value = 1
+			hidden_effect = {
+				change_variable = {
+					which = hvr_weather_action_counter
+					value = 1
+				}
 			}
 			random_list = {
 				33 = { change_innovativeness = 1 } 
@@ -2443,9 +2706,11 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 				name = hvr_experiment_with_electricity_lvl_2
 				duration = 3650
 			}
-			change_variable = {
-				which = hvr_weather_action_counter
-				value = 1
+			hidden_effect = {
+				change_variable = {
+					which = hvr_weather_action_counter
+					value = 1
+				}
 			}
 			random_list = {
 				33 = { change_innovativeness = 3 } 
@@ -2477,9 +2742,11 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 			name = hvr_rainbow
 			duration = 2555 #7 years
 		}
-		change_variable = {
-			which = hvr_weather_action_counter
-			value = 1
+		hidden_effect = {
+			change_variable = {
+				which = hvr_weather_action_counter
+				value = 1
+			}
 		}
 		add_adm_power = -50
 		add_dip_power = -50
@@ -2496,9 +2763,11 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 			name = hvr_rainbow_lvl_2
 			duration = 2555 #7 years
 		}
-		change_variable = {
-			which = hvr_weather_action_counter
-			value = 1
+		hidden_effect = {
+			change_variable = {
+				which = hvr_weather_action_counter
+				value = 1
+			}
 		}
 		add_adm_power = -50
 		add_dip_power = -50

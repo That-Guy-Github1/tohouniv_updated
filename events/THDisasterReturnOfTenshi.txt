@@ -5,9 +5,9 @@
 namespace = th_return_of_tenshi_disaster
 
 country_event = {  ### Start of the rebellion
-	id = th_return_of_tenshi.1
-	title = th_return_of_tenshi.1.t
-	desc = th_return_of_tenshi.1.desc
+	id = th_return_of_tenshi.1000
+	title = th_return_of_tenshi.1000.t
+	desc = th_return_of_tenshi.1000.desc
 	picture = TENSHI_eventPicture
 	
 	is_triggered_only = yes
@@ -16,14 +16,13 @@ country_event = {  ### Start of the rebellion
 	immediate = {
 		hidden_effect = {
 			set_country_flag = th_tenshi_rebelion_already_fired
-
 		}
 	}
 
 	#Tenshi has arrived
 	option = {
-		name = th_return_of_tenshi.1.a
-		custom_tooltip = th_return_of_tenshi.1.a.ct
+		name = th_return_of_tenshi.1000.a
+		custom_tooltip = th_return_of_tenshi.1000.a.ct
 		ai_chance = {
 			factor = 100
 		}

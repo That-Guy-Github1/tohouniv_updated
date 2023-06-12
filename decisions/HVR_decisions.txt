@@ -276,4 +276,51 @@ country_decisions = {
 		ai_importance = 50
 	}
 
+	hvr_welcome_to_casino = {
+		color = { 252 186 3 }
+		major = yes
+		potential = {
+		 has_country_flag = hvr_casino_is_here	
+		}
+
+		allow = {
+			OR = {
+				5313 = {
+					type = th_monument_hvr_casino
+					tier = 1
+					owned_by = ROOT
+				}
+				5313 = {
+					type = th_monument_hvr_casino
+					tier = 2
+					owned_by = ROOT
+				}
+				5313 = {
+					type = th_monument_hvr_casino
+					tier = 3
+					owned_by = ROOT
+				}
+			}
+			OR = {
+				had_country_flag = {
+					flag = th_hvr_went_to_casino 
+					days = 7300
+				}
+				NOT = { has_country_flag = th_hvr_went_to_casino }
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = flavor_hvr.777
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		ai_importance = 50
+	}
+
 }

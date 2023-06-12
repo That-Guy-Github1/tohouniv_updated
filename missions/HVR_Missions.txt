@@ -2391,6 +2391,39 @@ hvr_slot5_branch = {
 				province_id = 4903
 				province_id = 2519
 				province_id = 915
+				province_id = 869
+				province_id = 4637
+				province_id = 2491
+				province_id = 2493
+				province_id = 4632
+				province_id = 880
+				province_id = 2476
+				province_id = 877
+				province_id = 4633
+				province_id = 879
+				province_id = 2492
+				province_id = 881
+				province_id = 4630
+				province_id = 885 
+				province_id = 891
+				province_id = 4914
+				province_id = 2509
+				province_id = 900
+				province_id = 4904
+				province_id = 899
+				province_id = 2515
+				province_id = 4923
+				province_id = 897
+				province_id = 4886
+				province_id = 894
+				province_id = 895
+				province_id = 2528
+				province_id = 4885
+				province_id = 2529
+				province_id = 4884
+				province_id = 2014
+				province_id = 921
+				province_id = 893
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
@@ -2457,6 +2490,104 @@ hvr_slot5_branch = {
 				915 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
+
+				869 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4637 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2491 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2493 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4632 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				880 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2476 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				877 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4633 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				879 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2492 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				881 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4630 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				891 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4914 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2509 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				900 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4904 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				899 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2515 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4923 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				897 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4886 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				894 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				895 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2528 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4885 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2529 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4884 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2014 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				921 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				893 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+
 			} 
 			treasury = 5000	
 		} 
@@ -2474,44 +2605,38 @@ hvr_slot5_branch = {
 		required_missions = { HVR_route_66 }
 		provinces_to_highlight = { 
 			OR = {
-				province_id = 950
-				province_id = 2547 
-				province_id = 938
-				province_id = 952
-				province_id = 2550
-				province_id = 953
-				province_id = 2554
+				province_id = 2664
+				province_id = 835
+				province_id = 4595
+				province_id = 2819
+
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		} 
 
 		trigger = { 
-			950 = {
+			2664 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			2547 = {
+			835 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			938 = {
+			4595 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			952 = {
+			2819 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			2550 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			953 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2554 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			naval_forcelimit = 150
 		} 
 
 		effect = { 
+			hidden_effect = {
+				set_country_flag = can_construct_panama_canal
+			}
+			country_event = {
+				id = flavor_hvr.52
+			}
 			british_isles_region = {
 				limit = {
 					NOT = { is_core = HVR  }

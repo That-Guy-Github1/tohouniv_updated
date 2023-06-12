@@ -1677,7 +1677,13 @@ spriteTypes = {
 		allwaystransparent = yes
 	}
 
-	RESORT_eventPicture
+	spriteType = {
+		name = "TOUHOU_CASINO_eventPicture"
+		texturefile = "gfx/event_pictures/Touhou/TOUHOU_CASINO_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	TOUHOU_CASINO_eventPicture
 
 
 	

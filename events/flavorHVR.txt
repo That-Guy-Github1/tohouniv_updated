@@ -1730,7 +1730,91 @@ country_event = {   #Completed contruction
 					name = hvr_route_66_modifier
 					duration = -1
 				}
-			}			
+			}
+			lower_louisiana_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = hvr_route_66_modifier
+					duration = -1
+				}
+			}
+			west_florida_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = hvr_route_66_modifier
+					duration = -1
+				}
+			}
+			southern_illinois_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = hvr_route_66_modifier
+					duration = -1
+				}
+			}
+			mississippi_plain_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = hvr_route_66_modifier
+					duration = -1
+				}
+			}
+			2528 = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = hvr_route_66_modifier
+					duration = -1
+				}
+			}
+			2529 = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = hvr_route_66_modifier
+					duration = -1
+				}
+			}
+			4884 = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = hvr_route_66_modifier
+					duration = -1
+				}
+			}	 			
 		}
 	}
 }
@@ -2003,7 +2087,7 @@ country_event = {   #Aya wants to have interview... hehe.
 }
 
 country_event = {   #Aya brings GREAT NEWS ABOUT HIGAN
-	id = flavor_hvr.40
+	id = flavor_hvr.40      # In the memory of Alexey Navalny and his great investigations
 	title = flavor_hvr.40.t
 	picture = EIKI_CORRUPTION_eventPicture
 	desc = flavor_hvr.40.desc
@@ -2050,6 +2134,7 @@ country_event = {   #Open up Casino
 
 	option = {	 
 	name = flavor_hvr.41.a
+	set_country_flag = hvr_casino_is_here
 	if = {
 		limit = { has_dlc = "Leviathan" }
 		add_treasury = -250
@@ -2093,12 +2178,14 @@ country_event = {   #Open up Resort
 	name = flavor_hvr.42.a
 		if = {
 			limit = { has_dlc = "Leviathan" }
+			add_treasury = -2500
 			5036 = {
 				set_province_flag = hvr_resort_unlocked
 				add_great_project = {
 					type = th_monument_hvr_resort
 					instant = yes
 				}
+				set_great_project_tier_1 = { type = th_monument_hvr_resort }
 			}
 		}
 		else = {
@@ -2116,12 +2203,14 @@ country_event = {   #Open up Resort
 		name = flavor_hvr.42.b
 			if = {
 				limit = { has_dlc = "Leviathan" }
+				add_treasury = -2500
 				5052 = {
 					set_province_flag = hvr_resort_unlocked
 					add_great_project = {
 						type = th_monument_hvr_resort
 						instant = yes
 					}
+					set_great_project_tier_1 = { type = th_monument_hvr_resort }
 				}
 			}
 			else = {
@@ -2138,12 +2227,14 @@ country_event = {   #Open up Resort
 	name = flavor_hvr.42.c
 		if = {
 			limit = { has_dlc = "Leviathan" }
+			add_treasury = -2500
 			5031 = {
 				set_province_flag = hvr_resort_unlocked
 				add_great_project = {
 					type = th_monument_hvr_resort
 					instant = yes
 				}
+				set_great_project_tier_1 = { type = th_monument_hvr_resort }
 			}
 		}
 		else = {
@@ -2475,37 +2566,33 @@ country_event = {   #Seize land for Shion
 }
 
 
-country_event = {   #Seize land for Shion
-	id = flavor_hvr.51
-	title = flavor_hvr.51.t
-	picture = SHION_eventPicture
-	desc = flavor_hvr.51.desc
+
+
+country_event = {   #Start building canal
+	id = flavor_hvr.52
+	title = flavor_hvr.52.t
+	picture = SUEZ_CANAL_eventPicture
+	desc = flavor_hvr.52.desc
 	is_triggered_only = yes
 	option = {	
-	name = flavor_hvr.51.a
-		5041 = {
-			cede_province = HVR
-			add_core = HVR
-			change_religion = ROOT
+	name = flavor_hvr.52.a
+	custom_tooltip = flavor_hvr.52.a.ct
+		hidden_effect = {
+			set_country_flag = can_construct_panama_canal
 		}
-		5060 = {
-			cede_province = HVR
-			add_core = HVR
-			change_religion = ROOT
+		panama_area = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_province_modifier = {
+				name = hvr_port_in_new_world
+				duration = -1
+			}
 		}
-		5061 = {
-			cede_province = HVR
-			add_core = HVR
-			change_religion = ROOT
-		}
-		5062 = {
-			cede_province = HVR
-			add_core = HVR
-			change_religion = ROOT
-		}
-		country_event = {
-			id = flavor_hvr.4
-			days = 3
+
+		add_country_modifier = {
+			name = hvr_help_to_build_panama_canal
+			duration = 9125
 		}
 	}
 }
@@ -3187,6 +3274,31 @@ country_event = {  # Naval benefits
 			add_country_modifier = {
 				name = hva_military_empire_lvl_4
 				duration = -1
+			}
+		}
+	}
+}
+
+
+country_event = {  # Casino
+	id = flavor_hvr.777
+	title = flavor_hvr.777.t
+	picture = TOUHOU_CASINO_eventPicture
+	desc = flavor_hvr.777.desc
+	is_triggered_only = yes
+
+	
+	option = { ### Let Tenshi play
+		name = flavor_hvr.777.a
+		if = {
+			limit = {
+				custom_trigger_tooltip = {
+					tooltip = hvr_tenshi_on_throne_tt
+					has_ruler_flag = th_original_tenshi
+				}
+			}
+			country_event = {
+				id = flavor_hvr.778
 			}
 		}
 	}

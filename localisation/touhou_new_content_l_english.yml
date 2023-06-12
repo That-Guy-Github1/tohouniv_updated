@@ -348,6 +348,10 @@ flavor_hvr.51.t: "Retaken land from Reimu"
 flavor_hvr.51.desc: "We have defeated Reimu and took some land from her! Now, after some prepartions, we will be able to transfer this land to our friend, Shion."
 flavor_hvr.51.a: "Begin occupation of Reimu lands!"
 
+flavor_hvr.52.t: "Panama Canal" 
+flavor_hvr.52.desc: "Our engineers have noticed, that it is quite possible to build a canal, that will allow us to make a save passage between the Pacific Ocean and the Atlantic Ocean for our ships. The project itself will require a huge amount of funding, but will allow us to visit Europe, showing them the strength of our fleet. Other than that, it will also increase our trade influence over the world, as there will be many ships willing to use this canal, to transport their goods.\n\nSome wealthy Celestials are willing to finance this project by offering us debts at a low rate. It seems that the appearance of the channel is on the list of their interests. Also, we can slightly increase taxes in our country during the construction of the Panama Canal."
+flavor_hvr.52.a: "Let's start the construction of this great project!"
+flavor_hvr.52.a.ct: "We can now build §YPanama Canal§!!"
 
 flavor_lcu.102.t: "Lunarian Faith"
 flavor_lcu.102.desc: "Now that Eientei is being controlled by Lunarians, perhaps it is time for us to adopt Lunarian faith?"
@@ -403,6 +407,10 @@ flavor_kne.3.a: "Adopt new goals and ideas for our country!"
  desc_lunar_lunarian_security_corps_aspect_v2: "In the past the Moon Rabbits were ready to cause revolts against their supreme masters and it took massive amounts of severe actions to get things under control again. This kind of events resulted eventually into the creation of the Lunarian Security Corps, the government's own police, who controls in regular times the realm's subjects so they don't get funny ideas."
 
 ### Modifiers
+hvr_port_in_new_world: "Ports in the New World"
+hvr_port_in_new_world_desc: "A few specified ports around Panama canal, allowing us to operate in these waters more easily."
+hvr_help_to_build_panama_canal: "Economical Consolidation"
+hvr_help_to_build_panama_canal_desc: "Our society agreed to help us in our desire to build a great project, Panama Canal."
 hvr_good_news_for_aya: "Increased Sales!"
 hvr_good_news_for_aya_desc: "Looks like Aya made a very good article this time around!"
 hvr_judgement_day_modifier: "Judgement Day"
@@ -640,6 +648,8 @@ ran_country_release_decision_desc: "I have a quite interesting task for Ran, whi
 kne_country_release_decision_title: "Keine in search of Ancient History"
 kne_country_release_decision_desc: "Our favorite guardian and teacher, Keine, wants to visit China in the search of the ancient history, left by humans that were living a long time before us."
 
+hvr_welcome_to_casino_title: "Welcome to Casino!"
+hvr_welcome_to_casino_desc: "Now that we own casino, we can invite some players over here, like Tenshi with her natural luck! Or maybe... even someone else.\n\nWWe can visit casino only once in 20 years, to not arise suspicious from other players."
 hvr_receive_profits_from_heavenly_state_title: "Receive benefits from Heavenly Trade Enterprise!"
 hvr_receive_profits_from_heavenly_state_desc: "Our holdings in the America will provide a good bust to our economy."
 hvr_receive_profits_from_heavenly_militarized_state_title: "Receive benefits from Heavenly Militarized State!"
@@ -660,6 +670,7 @@ th_hvr_talks_with_eiki: "Accepted a Lecture from Eiki"
 th_Heavenly_armada: "Heavenly Armada"
 th_Heavenly_armada_desc: "Large Armada of ships to ensure our dominance in the sea, with additional small maintenance ships for repairs right in the sea."
 ## Tooltips
+flavor_hvr.52.a.ct: "We can now build §YPanama Canal§!!"
 hvr_less_heavy_ships_than_us_ct: "We need to have the largest number if Heavy ships in the World!"
 th_no_iku_advisor: "Iku has not been recruited as Advisor in the last 20 years."
 hvr_talks_with_eiki_tooltip: "We will try to improve our relations with Yama in order to bribe her later on. But first, we will agree to listen to Yama lecture."

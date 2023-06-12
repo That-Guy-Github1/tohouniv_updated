@@ -1675,8 +1675,19 @@ jnk_grace_of_goddess_of_vengeance = {
 
 #Heavenly Realm event modifiers
 
+hvr_port_in_new_world = {
+	local_ship_repair = 0.25
+	ship_recruit_speed = -0.25  
+}
+
+hvr_help_to_build_panama_canal = {
+	interest = -3
+	global_tax_modifier = 0.25
+}
+
 hva_free_colony = {
 	colony_cost_modifier = -0.95
+	global_colonial_growth = 50
 }
 
 hvr_good_news_for_aya = {
@@ -1878,6 +1889,7 @@ hvr_keystones_for_marines_modifier = {
 lcu_world_dominance_modifier = {
 	culture_conversion_time = -0.25
 	missionary_maintenance_cost = -0.5
+	missionaries = 2
 }
 
 hvr_continue_colonisation_effort = {

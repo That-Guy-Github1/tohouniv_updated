@@ -1320,7 +1320,7 @@ country_decisions = {
 				discount = yes
 				female = yes
 				culture = Lunarian_culture
-				religion = ROOT
+				religion = th_lunarian_religion
 			}
 			hidden_effect = {	
 				clr_country_flag = th_hired_advisor_yorihime

@@ -8,7 +8,7 @@ th_hvr_weather_control_heavy_rain = { ### Heavy rain, big harvest
 	}
 
 	is_allowed = {
-		NOT = { FROM = { has_country_modifier = hvr_heavy_rain } }		
+		NOT = { FROM = { has_country_modifier = hvr_used_weather_control_on_target } }		
 	}
 
 	on_accept = {
@@ -46,7 +46,7 @@ th_hvr_weather_control_disperse_clouds = {   ### No harvest for you!
 	}
 
 	is_allowed = {
-		NOT = { FROM = { has_country_modifier = hvr_disperse_clouds } }		
+		NOT = { FROM = { has_country_modifier = hvr_used_weather_control_on_target } }		
 	}
 
 	on_accept = {
@@ -84,7 +84,7 @@ th_hvr_weather_control_devastating_earthquake = {   ### Devastating earthquake
 	}
 
 	is_allowed = {
-		NOT = { FROM = { has_country_modifier = hvr_devastating_earthquake } }		
+		NOT = { FROM = { has_country_modifier = hvr_used_weather_control_on_target } }		
 	}
 
 	on_accept = {
@@ -122,7 +122,7 @@ th_hvr_weather_control_terraforming = {   ### Terraforming
 	}
 
 	is_allowed = {
-		NOT = { FROM = { has_country_modifier = hvr_terraforming } }		
+		NOT = { FROM = { has_country_modifier = hvr_used_weather_control_on_target } }		
 	}
 
 	on_accept = {
@@ -162,7 +162,7 @@ th_hvr_weather_control_thunderstorm = {   ### Ride the Lightning! / Thunderstorm
 	}
 
 	is_allowed = {
-		NOT = { FROM = { has_country_modifier = hvr_thunderstorm } }		
+		NOT = { FROM = { has_country_modifier = hvr_used_weather_control_on_target } }			
 	}
 
 	on_accept = {
@@ -202,7 +202,7 @@ th_hvr_weather_control_meteorite = {   ### Comet Sighted!
 	}
 
 	is_allowed = {
-		NOT = { FROM = { has_country_modifier = hvr_meteorite } }		
+		NOT = { FROM = { has_country_modifier = hvr_used_weather_control_on_target } }		
 	}
 
 	on_accept = {
@@ -243,7 +243,7 @@ th_hvr_weather_control_hurricane = {   ### Hurricane approaching!
 	}
 
 	is_allowed = {
-		NOT = { FROM = { has_country_modifier = hvr_hurricane } }		
+		NOT = { FROM = { has_country_modifier = hvr_used_weather_control_on_target } }		
 	}
 
 	on_accept = {
@@ -285,7 +285,7 @@ th_hvr_weather_control_tornado = {   ### Hurricane approaching!
 	}
 
 	is_allowed = {
-		NOT = { FROM = { has_country_modifier = hvr_tornado } }		
+		NOT = { FROM = { has_country_modifier = hvr_used_weather_control_on_target } }		
 	}
 
 	on_accept = {
@@ -326,7 +326,7 @@ th_hvr_weather_control_rainbow = {   ### Rainbow
 	}
 
 	is_allowed = {
-		NOT = { FROM = { has_country_modifier = hvr_rainbow } }		
+		NOT = { FROM = { has_country_modifier = hvr_used_weather_control_on_target } }		
 	}
 
 	on_accept = {

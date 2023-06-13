@@ -2869,6 +2869,54 @@ country_event = {  ### Select what kind of weather you want to use on yourself
 	else = { custom_tooltip = flavor_hvr.101.d.ct2 }		
 }
 
+option = { # Aurora
+name = flavor_hvr.101.f
+if = {
+	limit = {
+		has_country_flag = hvr_empire_of_heaven_and_hell_flag
+		NOT = { has_country_modifier = hvr_aurora }
+		NOT = { has_country_flag = hvr_angel_of_apocalypse}
+	}
+	add_country_modifier = {
+		name = hvr_aurora
+		duration = 1825 #5 years
+	}
+	hidden_effect = {
+		change_variable = {
+			which = hvr_weather_action_counter
+			value = 1
+		}
+	}
+	add_mil_power = -200
+}
+else_if = {
+	limit = {
+		has_country_flag = hvr_empire_of_heaven_and_hell_flag
+		NOT = { has_country_modifier = hvr_aurora }
+		NOT = { has_country_modifier = hvr_aurora_lvl_2 }
+		has_country_flag = hvr_angel_of_apocalypse
+	}
+	add_country_modifier = {
+		name = hvr_aurora_lvl_2
+		duration = 2555 #7 years
+	}
+	hidden_effect = {
+		change_variable = {
+			which = hvr_weather_action_counter
+			value = 1
+		}
+	}
+	add_mil_power = -200
+}
+else_if = {
+	limit = {
+		NOT = { has_country_flag = hvr_empire_of_heaven_and_hell_flag }
+	}
+	custom_tooltip = flavor_hvr.101.f.ct
+}
+else = { custom_tooltip = flavor_hvr.101.f.ct2 }		
+}
+
 	option = {  #Take me back
 		name = flavor_hvr.101.e
 		ai_chance = {
@@ -2892,6 +2940,14 @@ country_event = {  #Used Heavy rain on target
 				name = hvr_heavy_rain
 				duration = 1850
 			}
+			hidden_effect = {
+				add_country_modifier = {
+				name = hvr_used_weather_control_on_target
+				duration = 3650
+				hidden = yes
+				}
+			}
+
 	}
 }
 
@@ -2908,6 +2964,13 @@ country_event = {  #Used Disperse clouds on target
 			add_country_modifier = {
 				name = hvr_disperse_clouds
 				duration = 1850
+			}
+			hidden_effect = {
+				add_country_modifier = {
+				name = hvr_used_weather_control_on_target
+				duration = 3650
+				hidden = yes
+				}
 			}
 	}
 }
@@ -2926,6 +2989,13 @@ country_event = {  #Used Devastating Earthquake on target
 				name = hvr_devastating_earthquake
 				duration = 1850
 			}
+			hidden_effect = {
+				add_country_modifier = {
+				name = hvr_used_weather_control_on_target
+				duration = 3650
+				hidden = yes
+				}
+			}
 	}
 }
 
@@ -2943,6 +3013,13 @@ country_event = {  #Used Terraforming on target
 			name = hvr_terraforming 
 			duration = 1850
 		}
+		hidden_effect = {
+			add_country_modifier = {
+			name = hvr_used_weather_control_on_target
+			duration = 3650
+			hidden = yes
+			}
+		}
 		random_owned_province = {
 			limit = {
 				is_state_core = root
@@ -2959,7 +3036,7 @@ country_event = {  #Used Terraforming on target
 	}
 }
 
-country_event = {  #Let your enemies Ride the Lightning! / Thunderstorm
+country_event = {  #Let your enemies Ride the Lightning! / Thunderstorm / aka Typhoon
 	id = flavor_hvr.106
 	title = flavor_hvr.106.t
 	picture = THUNDERSTORM_eventPicture
@@ -2972,6 +3049,13 @@ country_event = {  #Let your enemies Ride the Lightning! / Thunderstorm
 			add_country_modifier = {
 				name = hvr_thunderstorm
 				duration = 1850
+			}
+			hidden_effect = {
+				add_country_modifier = {
+				name = hvr_used_weather_control_on_target
+				duration = 3650
+				hidden = yes
+				}
 			}
 	}
 }
@@ -3004,6 +3088,13 @@ country_event = {  #Let your enemies taste a Meteorite!
 				name = hvr_meteorite
 				duration = 1850
 		}
+		hidden_effect = {
+			add_country_modifier = {
+			name = hvr_used_weather_control_on_target
+			duration = 3650
+			hidden = yes
+			}
+		}
 	}
 }
 
@@ -3020,6 +3111,13 @@ country_event = {  # Let your enemies taste Hurricane!
 			add_country_modifier = {
 				name = hvr_hurricane
 				duration = 1850
+			}
+			hidden_effect = {
+				add_country_modifier = {
+				name = hvr_used_weather_control_on_target
+				duration = 3650
+				hidden = yes
+				}
 			}
 	}
 }
@@ -3038,6 +3136,13 @@ country_event = {  # Let your enemies taste Tornado!
 				name = hvr_tornado
 				duration = 1850
 			}
+			hidden_effect = {
+				add_country_modifier = {
+				name = hvr_used_weather_control_on_target
+				duration = 3650
+				hidden = yes
+				}
+			}
 	}
 }
 
@@ -3055,6 +3160,13 @@ country_event = {  # Rainbow on target
 				name = hvr_rainbow 
 				duration = 1850
 			}
+			hidden_effect = {
+				add_country_modifier = {
+				name = hvr_used_weather_control_on_target
+				duration = 3650
+				hidden = yes
+				}
+			}
 	}
 }
 
@@ -3068,10 +3180,17 @@ country_event = {  # Armageddon
 	
 	option = { 
 		name = flavor_hvr.110.a
-			add_stability = -3
+			add_stability = -4
 			add_country_modifier = {
 				name = hvr_armageddon 
 				duration = 1850
+			}
+			hidden_effect = {
+				add_country_modifier = {
+				name = hvr_used_weather_control_on_target
+				duration = 3650
+				hidden = yes
+				}
 			}
 	}
 }

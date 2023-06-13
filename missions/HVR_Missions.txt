@@ -1410,6 +1410,10 @@ hvr_slot3_branch = {
 		 } 
 
 		effect = {
+			custom_tooltip = hvr_aurora_unlocked_ct
+			hidden_effect = {
+				set_country_flag = hvr_empire_of_heaven_and_hell_flag
+			}
 			if = {
 				limit = {
 					NOT = { government_rank = 3 }
@@ -2631,9 +2635,6 @@ hvr_slot5_branch = {
 		} 
 
 		effect = { 
-			hidden_effect = {
-				set_country_flag = can_construct_panama_canal
-			}
 			country_event = {
 				id = flavor_hvr.52
 			}

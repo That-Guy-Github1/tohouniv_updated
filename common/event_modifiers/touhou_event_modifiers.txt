@@ -1989,12 +1989,19 @@ hvr_keystone_scouts_hostile = {
 }
 
 #Mechanic / GOV. mechanic
+
+hvr_used_weather_control_on_target = {
+prestige = 0.01
+}
+
 hvr_heavy_rain = {   #DEFAULT
 	global_trade_goods_size_modifier = 0.15 
+	production_efficiency = 0.05
 }
 
 hvr_heavy_rain_lvl_2 = {  #Unlocked at the end of MT
-	global_trade_goods_size_modifier = 0.25 
+	global_trade_goods_size_modifier = 0.25
+	production_efficiency = 0.1 
 }
 
 hvr_disperse_clouds = {    #DEFAULT
@@ -2004,7 +2011,7 @@ hvr_disperse_clouds = {    #DEFAULT
 
 hvr_devastating_earthquake = {   #UNLOCKED on mission hvr_weather_control
 	defensiveness = -0.25
-	morale_damage_received = 0.05
+	morale_damage_received = 0.1
 }
 
 hvr_terraforming = {            #UNLOCKED on mission hvr_learn_from_suwako
@@ -2029,6 +2036,16 @@ hvr_experiment_with_electricity_lvl_2 = {			#Unlocked at the end of MT
 	idea_cost = -0.2
 }
 
+hvr_aurora = {									#Unlocked on Heaven and Hell mission
+	discipline = 0.05
+	assault_fort_cost_modifier = -0.5
+}
+
+hvr_aurora_lvl_2 = {									#Unlocked at the end of MT
+	discipline = 0.1
+	assault_fort_cost_modifier = -1
+}
+
 
 hvr_hurricane = {							#UNLOCKED on mission hvr_mastery_over_nature + bribing Eiki + giving interview to Aya
 	global_monthly_devastation = 0.15
@@ -2036,7 +2053,8 @@ hvr_hurricane = {							#UNLOCKED on mission hvr_mastery_over_nature + bribing E
 }
 
 hvr_tornado = {							#UNLOCKED on mission hvr_mastery_over_nature
-	war_exhaustion = 0.1
+	war_exhaustion = 0.08
+	global_monthly_devastation = 0.08
 }
 
 hvr_rainbow = {								#UNLOCKED on mission hvr_mastery_over_nature
@@ -2050,10 +2068,10 @@ hvr_rainbow_lvl_2 = {								#UNLOCKED at the end of MT
 }
 
 hvr_meteorite = {						#UNLOCKED on mission hvr_learn_from_suwako
-	development_cost = 0.05
+	development_cost = 0.1
 }
 
-hvr_armageddon = {
+hvr_armageddon = {							#UNLOCKED at the end of MT
 	global_unrest = 10
 }
 

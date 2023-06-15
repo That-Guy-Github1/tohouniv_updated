@@ -3026,7 +3026,7 @@
  flavor_lcu.20.t: "Exterminate Earthlings!"
  flavor_lcu.20.desc: "There is no point in trying to make contact with earthlings. They are filled with impurity, and there is only one solution to this. Let's just exterminate them completely, purifying their tainted land from any impurity."
  flavor_lcu.20.a: "Exterminate them!"
- flavor_lcu.20.a.tt: "We will gain unique §YCasus belli§! called §YExtermination§!, usable against any country with different culture.\nWe will also gain claims on the §Yimportant cities§! of Europe."
+ flavor_lcu.20.a.tt: "We will gain unique §YCasus belli§! called §YExtermination§!, usable against any country with different culture.\nWe will also gain claims on the §Yimportant cities§! of Europe.\n\nFrom now on, we can recruit Yorihime as superior general via decision! She will personally lead our war against earthlings! We will be able to do that once per 50 years."
  flavor_lcu.21.t: "Smell of Victory"
  flavor_lcu.21.desc: "The once peaceful and playful fairies are running away, screaming for help. The once plentiful sunflower fields are being burnt down, along with youkai, which decided to hide inside them. Soon, all of this land will be exterminated, purified, and the eternal peace and harmony will await it."
  flavor_lcu.21.a: "What is this smell, you ask? This is a Smell of Victory."

@@ -1753,6 +1753,10 @@ spriteTypes = {
 		name = "mission_iku_ride_the_lightning"
 		texturefile = "gfx//interface//missions//touhou_missions/mission_iku_ride_the_lightning.dds"
 	}
+	spriteType = {
+		name = "mission_advanced_warfare"
+		texturefile = "gfx//interface//missions//touhou_missions//mission_advanced_warfare.dds"
+	}
 	
 	spriteType = {
 		name = "mission_touhou_ringo"

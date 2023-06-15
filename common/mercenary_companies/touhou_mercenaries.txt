@@ -786,19 +786,23 @@ merc_th_wild_oni_from_heaven = {
 	}
 }
 
-merc_keystone_scouts = {
-	regiments_per_development = 0.01
-	home_province = 5032
-	sprites = { dlc068_jap_sprite_pack jap_base_sprite_pack }
+merc_th_rabbits_with_exoskeletons = {
+	regiments_per_development = 0.06
+	home_province = 5320
+	sprites = { robots_sprite_pack }
 	trigger = {
-		th_is_allowed_to_recruit_mercenaries = yes
+		has_country_flag = lcu_looted_yumemi_space_ship
 		th_unlocked_mercenary_company = {
-			mercenary_company = merc_keystone_scouts
+			mercenary_company = merc_th_rabbits_with_exoskeletons
 		}
 	}
-
-	cavalry_weight = 1
+	cost_modifier = 1
+	artillery_weight = 0.4
 	modifier = {
-		movement_speed = 0.5
+		fire_damage = 0.5
+		discipline = 0.2
+		leader_land_fire = 3
+		leader_land_shock = 2
+		movement_speed = 0.1
 	}
 }

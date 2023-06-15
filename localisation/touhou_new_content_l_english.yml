@@ -83,6 +83,8 @@ had_disaster_for_x_years_tenshi: "Tenshi needs to solidify her rule over the cou
 mechanic_th_weather_control_mechanic_yes: "Can use §YWeather Control§! ability"
 mechanic_th_enable_respawn_for_mil_tradition_yes: "Can respawn Youmu for §YMilitary Points§!. Ruler will always become a General."
 ### Mercenary
+merc_th_rabbits_with_exoskeletons: "Rabbits with Exoskeletons"
+th_unlock_merc_th_rabbits_with_exoskeletons_tt: "Unlock §GRabbits with Exoskeletons§!"
 merc_th_wild_oni_from_heaven: "Wild Oni from Heaven"
 th_unlock_merc_th_wild_oni_from_heaven_tt: "Unlock §GWild Oni from Heaven§!"
 ### Advisors
@@ -647,6 +649,8 @@ th_heavenly_trade_company_is_our: "$NAME|Y$ is our Grand Company"
 th_heavenly_trade_company_overlord_title: "Overlord"
 
 ### Decisions
+lcu_recruit_yorihime_general_title: "Call Yorihime into Service"
+lcu_recruit_yorihime_general_desc: "Lunarian Princess Yorihime kindly agreed to help us with our military campaign, personally leading our armies to victory!"
 ymu_japanese_missions_title: "Receive New Japanese Missions"
 ymu_japanese_missions_desc: "This decision will allow you to gain new missions for Japan, without forming it."
 ymu_respawn_ymu_title: "Call Youmu back!"
@@ -678,7 +682,8 @@ th_hvr_talks_with_eiki: "Accepted a Lecture from Eiki"
 th_Heavenly_armada: "Heavenly Armada"
 th_Heavenly_armada_desc: "Large Armada of ships to ensure our dominance in the sea, with additional small maintenance ships for repairs right in the sea."
 ## Tooltips
-
+lcu_looted_yumemi_space_ship_ct: "We have salvaged some parts of advanced tech from Yumemi Space Ship" 
+th_yorihime_hired_for_50_years: "Yorihime has not been hired within the last §Y50 years§!"
 hvr_aurora_unlocked_ct: "Tenshi will be able to use a new §YWeather Control§! power, called §MAurora§!!\n\n"
 hvr_less_heavy_ships_than_us_ct: "We need to have the largest number if Heavy ships in the World!"
 th_no_iku_advisor: "Iku has not been recruited as Advisor in the last 20 years."
@@ -767,6 +772,9 @@ HVR_way_to_use_keystones_title: "Best Way to use Keystones!"
 HVR_way_to_use_keystones_desc: "Keystones... We can control them, but we didn't find much use of them, other than throwing them at enemies... until now! With the development of our army and fleet, Tenshi have noticed that we can use keystones in quite unusual and useful way.\n\nBy attaching these Keystones to our ships, and controlling them, we can boost the speed of our ships to absolutely new levels!\n\nNot only that, we can create a scout party that will float around on the keystones! They will be able to scout the area before engagement, and provide us with a value information about the shortest route available! We won't be able to create a scout party for every single unit of our army, but, we will manage to do so for our marines!"
 HVR_dancing_halls_title: "Dance Halls"
 HVR_dancing_halls_desc: "Our troops have already proven to be one of the best, always eager to battle and adventure. All thanks to Iku Nagae, who leads them into the battle, be it land, or sea. However, even the best troops tire up with time. And Iku Nagae, along with her marines brigade, is not exception.\n\nAs we know, Iku is quite interested in dancing. What if we will build a whole Dance Hall for her and her troops? Surely, Iku will be glad to receive such favor from us! Not to mention, it will improve troops morale too! By allowing them to rest from time to time, we will improve the quality of our troops in the long run."
+
+LCU_advanced_warfare_title: "Advanced Warfare"
+LCU_advanced_warfare_desc: "Using our own technologican researches, and the human technology we found on Yumemi's spaceship, we can create something special for our troops. An exoskeleton that will increase their mobility, their defenses, and that will also increase their overall strength. Weak rabbits will now be quite strong, thanks to our exoskeletons, which will allow us to equip them with breakthrough, heavy weapons. However, the manufacture of exoskeletons requires a lot of rare materials, and their production itself takes a long time. The maximum that we can afford is to equip one regiment of infantrymen with these elite weapons."
 
 HVR_judgement_day_title: "Judgement Day"
 HVR_judgement_day_desc: ""

@@ -89,6 +89,9 @@ country_decisions = {
 			owns_core_province = 5312
 			AND = {
 				NOT = { has_leader = "Iku Nagae" }
+				NOT = {
+					advisor = th_advisor_iku		
+				}
 				custom_trigger_tooltip = {
 					tooltip = th_no_iku_advisor
 					OR = {
@@ -188,6 +191,9 @@ country_decisions = {
 			owns_core_province = 5312
 			AND = {
 				NOT = { has_leader = "Iku Nagae" }
+				NOT = {
+					advisor = th_advisor_iku		
+				}
 				custom_trigger_tooltip = {
 					tooltip = th_no_iku_advisor
 					OR = {

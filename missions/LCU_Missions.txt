@@ -817,6 +817,42 @@ lcu_slot3_branch = {
 			country_event = { id = flavor_lcu.9 }
 		}
 	}
+
+	LCU_advanced_warfare = {
+		icon = mission_advanced_warfare
+		required_missions = {  LCU_reisen }
+		position = 4
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				custom_trigger_tooltip = {
+					tooltip = lcu_looted_yumemi_space_ship_ct
+					has_country_flag = lcu_looted_yumemi_space_ship
+				}
+				army_professionalism = 1
+				innovativeness = 100
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = lcu_looted_yumemi_space_ship_ct
+					has_country_flag = lcu_looted_yumemi_space_ship
+				}
+				OR = {
+					barracks = 60
+					training_fields = 60
+				}				
+			}
+		}
+
+		effect = {
+			th_unlock_mercenary_company = {
+				mercenary_company = merc_th_rabbits_with_exoskeletons
+				free_merc = yes
+			}
+		}
+	}
 	
 
 	#LCU_enlighten_mistresses = {
@@ -1161,6 +1197,7 @@ lcu_slot4_branch = {
 		}	
 
 		effect = {
+			set_country_flag = lcu_looted_yumemi_space_ship
 			add_adm_power = 50
 			add_dip_power = 50
 			add_mil_power = 50

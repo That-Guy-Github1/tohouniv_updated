@@ -476,6 +476,8 @@
  th_religion_events.4.g: "Adopt the §YTheravada§! faith."
  th_religion_events.4.h: "Adopt the §YConfucianism§! faith."
  th_religion_events.4.i: "Adopt the §YHinduism§! faith."
+ th_religion_events.4.j: "Adopt the §YTengri§! faith."
+ th_religion_events.4.k: "Adopt the §YTouhou Buddhism§! faith."
  th_religion_events.4.zzz: "No. We cannot abandon our religious roots."
  ###CURSED DONATION BOX EVENTS###
  th_cursed_donation_box.1.t: "Curse of the Donation Box"
@@ -3024,7 +3026,7 @@
  flavor_lcu.20.t: "Exterminate Earthlings!"
  flavor_lcu.20.desc: "There is no point in trying to make contact with earthlings. They are filled with impurity, and there is only one solution to this. Let's just exterminate them completely, purifying their tainted land from any impurity."
  flavor_lcu.20.a: "Exterminate them!"
- flavor_lcu.20.a.tt: "We will gain unique §YCasus belli§! called §YExtermination§!, usable against any country with different culture.\nWe will also gain claims on the §Yimportant cities§! of Europe."
+ flavor_lcu.20.a.tt: "We will gain unique §YCasus belli§! called §YExtermination§!, usable against any country with different culture.\nWe will also gain claims on the §Yimportant cities§! of Europe.\n\nFrom now on, we can recruit Yorihime as superior general via decision! She will personally lead our war against earthlings! We will be able to do that once per 50 years."
  flavor_lcu.21.t: "Smell of Victory"
  flavor_lcu.21.desc: "The once peaceful and playful fairies are running away, screaming for help. The once plentiful sunflower fields are being burnt down, along with youkai, which decided to hide inside them. Soon, all of this land will be exterminated, purified, and the eternal peace and harmony will await it."
  flavor_lcu.21.a: "What is this smell, you ask? This is a Smell of Victory."
@@ -3381,6 +3383,10 @@
  TH_mission_events.7.desc: "\"Salam aleikum!\" The words of the human make little sense to the fairies who found this travelling merchant. Although obviously a man from the outworld, his clothing and his hat captured the interest of the fairies. \"You seem like girls seeking knowledge and wisdom. For the small price of 100 ducats I will give you my most valued maps.\"\nOf course the fairies fell for the merchants trick and lost of their valuables in exchange for three pieces of paper. Fortunately for us though, the maps (which we seized from the fairies due to their illegal outworld trade) are amazingly accurate."
  TH_mission_events.7.a: "At least something good came out of that."
  TH_mission_events.7.ct: "Discover the Muslim World."
+ TH_mission_events.8.t: "Maps of North America"
+ TH_mission_events.8.desc: "After the discovery of a whole new continent, a group of curious crow tengu immediately took off to take a look at it. \nThankfully for Gensokyo, they were kind enough to map it as they flew over this new land. Thankfully for our realm, our merchant was smart enough to steal it from them."
+ TH_mission_events.8.a: "Shower that merchant in gold at once!"
+ TH_mission_events.8.ct: "Discover North America"
  ###TOUHOU CHINA EVENTS###
  th_china_events.1.t: "Tributaries are breaking free!"
  th_china_events.1.desc: "With the loss of the Mandate of Heaven, even our dearest tributaries betrayed us! They broke from us away and are now seeking the protection of the new Emperor of China."

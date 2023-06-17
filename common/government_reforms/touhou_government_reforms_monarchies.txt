@@ -554,8 +554,8 @@ Lunarian_monarchy = {
 	monarchy = yes
 	modifiers = {
 		global_unrest = -1
-		max_absolutism = 25
-		yearly_absolutism = 0.1
+		max_absolutism = 30
+		yearly_absolutism = 1
 		global_autonomy = -0.075
 		governing_capacity = 300
 		num_accepted_cultures = -10
@@ -565,8 +565,10 @@ Lunarian_monarchy = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		has_pashas = yes
 		custom_attributes = {
+			lcu_government_mechanic = yes
 			pashas_purify_land = yes
 		}
+		government_abilities = { th_lunarians_gov }
 	}
 
 	effect = {
@@ -872,7 +874,9 @@ Gensokyan_kmj_travelling_kingdom = {
 		disables_settled_property = yes
 		enables_claim_immunity = yes
 		disables_subject_annexation = yes
+		kmj_government_mechanic = yes
 	}
+	government_abilities = { th_koishi_wandering_realm }
 }
 
 Gensokyan_fom_witch_government = {
@@ -1874,12 +1878,31 @@ Gensokyan_youmu_half_phantom_shogunate = {
 		army_tradition = 1
 		num_accepted_cultures = 4
 		no_stability_loss_on_monarch_death = yes
+		may_recruit_female_generals = yes
+		
 	}
 	effect = {
 		hidden_effect = {
 			if = {
-				limit = { is_female = yes } 
+				limit = { 
+					is_female = yes
+					government_rank = 1
+				} 
 				convert_female_ruler_to_general = 60
+			}
+			else_if = {
+				limit = { 
+					is_female = yes
+					government_rank = 2
+				} 
+				convert_female_ruler_to_general = 80
+			}
+			else_if = {
+				limit = { 
+					is_female = yes
+					government_rank = 3
+				} 
+				convert_female_ruler_to_general = 100
 			}
 			else = { convert_ruler_to_general = 60 }
 		}
@@ -1887,7 +1910,6 @@ Gensokyan_youmu_half_phantom_shogunate = {
 
 	custom_attributes = {
 		th_enable_respawn_for_mil_tradition = yes
-
 	}
 }
 
@@ -2041,7 +2063,7 @@ Gensokyan_hvr_dictatorship = {
 		global_autonomy = -0.05
 		max_absolutism = 10
 		governing_capacity = 200
-		num_accepted_cultures = 2
+		num_accepted_cultures = 3
 	}
 
 	custom_attributes = {
@@ -2070,12 +2092,12 @@ Gensokyan_hvr_absolute_dictatorship = {
 	nation_designer_cost = 80
 	modifiers = {
 		allowed_marine_fraction = 0.25
-		unjustified_demands = -0.25
+		unjustified_demands = -0.5
 		war_exhaustion = -0.10
 		min_autonomy = -10
 		global_autonomy = -0.1
-		yearly_absolutism = 1
-		max_absolutism = 30
+		yearly_absolutism = 0.5
+		max_absolutism = 25
 		governing_capacity = 400
 		num_accepted_cultures = 4
 	}
@@ -2084,6 +2106,85 @@ Gensokyan_hvr_absolute_dictatorship = {
 		th_weather_control_mechanic = yes
 	}
 	maintain_dynasty = yes 
+}
+
+
+Gensokyan_ran_monarchy = {
+	lock_level_when_selected = yes
+	icon = "ran_monarchy_reform"
+	allow_normal_conversion = no
+	potential = {
+		tag = RAN
+		OR = {
+			th_is_touhou_culture_group = yes
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = Gensokyan_ran_monarchy
+			}
+		}
+	}
+	#legacy_equivalent = Gensokyan_ran_monarchy_legacy
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		land_attrition = -0.1
+		tolerance_own = 2
+		diplomatic_upkeep = 1
+		num_accepted_cultures = 5
+		culture_conversion_cost = -0.25	
+		global_autonomy = -0.05
+		governing_capacity = 300
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.2
+	}
+	government_abilities = {
+		russian_mechanic
+	}
+}
+
+Gensokyan_hakutaku_monarchy = {
+	lock_level_when_selected = yes
+	icon = "hakutaku_monarchy_reform"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			tag = KNE
+			tag = KN2
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = Gensokyan_hakutaku_monarchy
+			}
+		}
+	}
+	#legacy_equivalent = Gensokyan_hakutaku_monarchy
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		cav_to_inf_ratio = 0.25
+		tolerance_heathen = 1
+		tolerance_own = 2
+		tolerance_heretic = 1
+		num_accepted_cultures = 5
+		global_autonomy = -0.05
+		governing_capacity = 300
+		harmonization_speed = 0.2
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		enables_horde_idea_group = yes
+		has_tributaries = yes
+		th_enforce_tributaries = yes
+		th_hakutaku_swap = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+	}
+		raze_province = yes
+	
 }
 
 Gensokyan_jnk_chinese_divine_state = {

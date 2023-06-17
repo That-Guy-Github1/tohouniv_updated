@@ -1,4 +1,5 @@
 spriteTypes = {
+<<<<<<< HEAD
 
 	### 17 SHOGUNATE ###
 	spriteType = {
@@ -38,6 +39,9 @@ spriteTypes = {
 		size = { x = 260 y = 20 }
 		effectFile = "gfx/FX/progress.lua"
 	}
+=======
+	#### All of these is related to "game/common/government_mechanics"
+>>>>>>> origin/Separate_tenshi_branch
 
 	### 14 NAVAL PROFESSIONALISM ###
 	spriteType = {
@@ -60,4 +64,45 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+<<<<<<< HEAD
+=======
+
+	spriteType = {
+		name = "GFX_lcu_gov_sagume"
+		texturefile = "gfx/interface/government_mechanics/th_lunarians_gov/lcu_gov_sagume.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_lcu_gov_toyohime"
+		texturefile = "gfx/interface/government_mechanics/th_lunarians_gov/lcu_gov_toyohime.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_lcu_gov_yorihime"
+		texturefile = "gfx/interface/government_mechanics/th_lunarians_gov/lcu_gov_yorihime.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_kmj_shadow_city"
+		texturefile = "gfx/interface/government_mechanics/th_koishi_wandering_realm/kmj_shadow_city.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_kmj_subconscious_manipulation"
+		texturefile = "gfx/interface/government_mechanics/th_koishi_wandering_realm/kmj_subconscious_manipulation.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_kmj_phone_call"
+		texturefile = "gfx/interface/government_mechanics/th_koishi_wandering_realm/kmj_phone_call.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+>>>>>>> origin/Separate_tenshi_branch
 }

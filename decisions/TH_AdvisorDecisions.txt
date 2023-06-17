@@ -540,6 +540,7 @@ country_decisions = {
 	}
 
 	lcu_call_sagume = {
+		color = {  250 241 254  }
 		potential = {
 			th_has_unlocked_advisor = {
 				advisor = th_advisor_sagume
@@ -577,6 +578,7 @@ country_decisions = {
 	}
 
 	lcu_call_doremy = {
+		color = {  107 33 249  }
 		potential = {
 			th_has_unlocked_advisor = {
 				advisor = th_advisor_doremy
@@ -614,6 +616,7 @@ country_decisions = {
 	}
 
 	lcu_call_reisen = {
+		color = {   201 94 248  }
 		potential = {
 			th_has_unlocked_advisor = {
 				advisor = th_advisor_reisen
@@ -651,6 +654,7 @@ country_decisions = {
 	}	
 
 	lcu_call_kaguya = {
+		color = {   254 181 38  }
 		potential = {
 			has_country_flag = lcu_kaguya_is_allowed
 			th_has_unlocked_advisor = {
@@ -668,7 +672,6 @@ country_decisions = {
 				NOT = { advisor = th_advisor_kaguya }
 				NOT = { has_advisor_type_in_pool = th_advisor_kaguya }
 			}
-			th_has_not_two_lunarian_advisors_active = yes
 		}	
 		effect = {
 			define_advisor = {
@@ -690,6 +693,7 @@ country_decisions = {
 
 
 	lcu_call_eirin = {   ### That was made in order to avoid confusion with cultures
+	color = {   0 72 242   }
 		potential = {
 			AND = {
 				th_is_or_was_tag = {
@@ -1037,6 +1041,7 @@ country_decisions = {
 	}
 
 	hvr_call_yorihime = {
+		color = {  219 156 254  }
 		potential = {
 			th_has_unlocked_advisor = {
 				advisor = th_advisor_yorihime
@@ -1047,7 +1052,19 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			owns_or_non_sovereign_subject_of = 5320
+			OR = {
+				owns_or_non_sovereign_subject_of = 5320
+				AND = {
+					OR = {
+						alliance_with = LEM
+					}
+					reverse_has_opinion = {
+						who = LEM
+						value = 100
+					}
+				}
+			}
+
 			custom_trigger_tooltip = {
 				tooltip = hvr_yorihime_hired_for_thirty_years
 				NOT = {
@@ -1065,7 +1082,7 @@ country_decisions = {
 				discount = yes
 				female = yes
 				culture = Lunarian_culture
-				religion = ROOT
+				religion = th_lunarian_religion
 			}
 		}
 		
@@ -1075,6 +1092,7 @@ country_decisions = {
 	}
 
 	hvr_call_iku = {
+		color = { 144 45 199 }
 		potential = {
 			th_has_unlocked_advisor = {
 				advisor = th_advisor_iku

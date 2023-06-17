@@ -15763,6 +15763,7 @@ white_house = {
 			OR = {
 				is_former_colonial_nation = yes
 				tag = USA
+				tag = HVA
 			}			
 		}
 	}
@@ -15778,6 +15779,7 @@ white_house = {
 			OR = {
 				is_former_colonial_nation = yes
 				tag = USA
+				tag = HVA
 			}			
 		}
 	}
@@ -15787,6 +15789,7 @@ white_house = {
 			OR = {
 				is_former_colonial_nation = yes
 				tag = USA
+				tag = HVA
 			}			
 		}
 	}

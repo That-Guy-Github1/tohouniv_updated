@@ -1,30 +1,4 @@
-﻿l_english:
-<<<<<<< HEAD
-
-
-### Government reforms
- Gensokyan_hvr_celestial_council:0 "Celestials Council"
- Gensokyan_hvr_celestial_council_desc:0 "Council of the oldest and respected Celestials, who only want a peaceful existence in Heaven."
- Gensokyan_hvr_dictatorship:0 "Heavenly Autocracy"
- Gensokyan_hvr_dictatorship_desc:0 "Heavenly Realm, led by the Hinanawi clan. The state, which previously only wanted a peaceful existence and enjoyment, is now ready to wage wars for dubious reasons. The abilities of Tenshi and Iku allow them to change the weather, adding chaos to what is happening."
- TOUHOU_USURPER:0 "Usurper"
- TOUHOU_DESPOT:0 "Despot"
- TOUHOU_TYRANT:0 "Tyrant"
-
- Gensokyan_hvr_absolute_dictatorship:0 "Absolute Rule of Heavens and Hell"
- Gensokyan_hvr_absolute_dictatorship_desc:0 "The absolute rule imposed by Tenshi, and Hinanawi clan. With the conquest of Hell and complete support from both Nobles and Cleargy, along with common population, there is no one to stop Tenshi in her deeds. Her rule is as strong as ever."
- TOUHOU_RULER_OF_HEAVEN_AND_HELL_FEMALE:0 "Celestial and Infernal Empress"
- TOUHOU_RULER_OF_HEAVEN_AND_HELL_MALE:0 "Celestial and Infernal Emperor"
-
- th_return_of_tenshi_disaster: "Return of Tenshi"
-### Mechanic
-mechanic_th_weather_control_mechanic_yes: "Can use §YWeather Control§! ability"
-### Decisions
-hvr_recruit_iku_admiral_title: "Recruit Iku Nagae as Admiral!"
-hvr_recruit_iku_admiral_desc: ""
-hvr_recruit_iku_general_title: "Recruit Iku Nagae as General!"
-hvr_recruit_iku_general_desc: ""
-=======
+l_english:
 ### Government mechanic for Koishi
 ability_th_koishi_wandering_realm: "Subconsciousness Power"
 mechanic_kmj_government_mechanic_yes: "Allows to use §YSubconsciousness Power§! abilities"
@@ -704,19 +678,11 @@ hvr_recruit_iku_admiral_title: "Recruit Iku Nagae as Admiral!"
 hvr_recruit_iku_admiral_desc: "We shall recruit Iku Nagae as our Admiral! Depending on Iku experience, she will receive different stats as Admiral."
 hvr_recruit_iku_general_title: "Recruit Iku Nagae as General!"
 hvr_recruit_iku_general_desc: "We shall recruit Iku Nagae as our General! Depending on Iku experience, she will receive different stats as General."
->>>>>>> origin/Separate_tenshi_branch
 hvr_power_of_weather_title: "Power of Weather Control"
 hvr_power_of_weather_desc: ""
 hvr_call_yorihime_title: "Call Yorihime into Service"
 hvr_call_yorihime_desc: "Lunarian Princess Yorihime kindly agreed to help us with our military campaign. Her experience with training of the moon rabbits can be also applied to our troops, making them more disciplined."
 hvr_call_iku_title: "Call Iku Nagae into Service as Advisor"
-<<<<<<< HEAD
-hvr_call_iku_desc: "Iku Nagae, previously working as just a messenger, acquired quite an important role for us. With her skills in naval and ground warfare, we are sure that she will also be valuable advisor to us."
-### Opinion modifier
-th_hvr_talks_with_eiki: "Accepted a Lecture from Eiki"
-
-## Tooltips
-=======
 hvr_call_iku_desc: "Iku Nagae, previously working as just a messenger, acquired quite important role for us. With her skills in naval and ground warfare, we are sure that she will also be valuable advisor to us."
 ### Opinion modifier
 th_hvr_talks_with_eiki: "Accepted a Lecture from Eiki"
@@ -757,18 +723,13 @@ hvr_discover_cascadia: "We have discovered §YCascadia§! colonial region"
 HVR_our_monument_needs_to_be_upgraded: "Our monument §YResort Paradise§! needs to be owned by us, and upgraded to level of §YSignificant(2)§!"
 HVR_upgrade_resort_even_more_tooltip: "Our monument §YResort Paradise§! will be upgraded!"
 HVR_deal_with_yukari_tooltip: "We will need some help from §YYukari§! to actually complete our plan. We will need to pay the §YOld Hag a visit§!, and maybe even beat hear up a bit to make her more cooperative! \n\nComplete the mission §YShow the Old Hag her Place§! or have §Y100 relations§! with §YMayohiga§!.\n"
->>>>>>> origin/Separate_tenshi_branch
 HVR_tenshi_disaster_is_active_tooltip: "§YReturn of Tenshi§! Disaster is §YActive§!"
 HVR_loyal_clergy_tooltip: "§YDisloyal Clergy§! modifier will be removed. We will unlock two new §YPrivileges§! for §YClergy Estate§!"
 HVR_loyal_nobles_tooltip: "§YDisloyal Nobles§! modifier will be removed. We will unlock two new §YPrivileges§! for §YNobles Estate§!"
 hvr_small_deal_with_clergy_tooltip: "From now on, §YDisloyal Clergy§! modifier will be less severe."
 hvr_small_deal_with_nobles_tooltip: "From now on, §YDisloyal Nobles§! modifier will be less severe."
 hvr_ties_with_moon_tooltip_reward: "Depending on our approach, we will receive different §YRewards§!.\n\nLunarians might agree to be §YRuled§! by us, if they trust us.\n\nIf we will have a large network of spies in Lunar Capital, we will receive §YRestoration of Union§! Casus Belli against them."
-<<<<<<< HEAD
-hvr_unlock_yorihime_tooltip: "We can now hire §YYorihime Watatsuki§! as §YAdvisor§!!"
-=======
 hvr_unlock_yorihime_tooltip: "We can now hire §YYorihime Watatsuki§! as §YAdvisor§!!\n"
->>>>>>> origin/Separate_tenshi_branch
 HVR_yorihime_recruited_tooltip: "We have recruited §YYorihime Watatsuki§! as §YAdvisor§!"
 HVR_weather_control_tt: "Used §YWeather Control§! at least §Y10§! times. (§Y[Root.GetWeatherControlCounter]§!/§Y10§!)"
 hvr_weather_control_counter_tt: "[Root.hvr_weather_action_counter.GetValue]"
@@ -777,15 +738,9 @@ hvr_engineers_of_kappapolis_tooltip: "Depending on our approach, we will receive
 hvr_deal_with_nitori_tooltip: "We have made a deal with §YNitori§!, and §YKappas§! agreed to share their technology with us."
 hvr_recruit_iku_as_admiral_tooltip_reward: "We can now recruit §YIku Nagae§! as §YAdmiral§! via decision! §YIku Nagae§! has levels of proficiency, and her skills will be improved upon completing more §Ymissions§!."
 hvr_recruit_iku_as_general_tooltip_reward: "We can now recruit §YIku Nagae§! as §YGeneral§! via decision! §YIku Nagae§! gained experience in Naval field, improving her stats as §YAdmiral§!."
-<<<<<<< HEAD
-hvr_won_iku_battles_tooltip: "Win at least §Y20§! (§Y[Root.hvr_won_iku_battles_counter.GetValue]§!/§Y20§!) ground battles, with a unit, where §YIku Nagae§! is assigned as §YGeneral§!."
-hvr_iku_as_advisor_reward_tooltip: "We can now recruit §YIku Nagae§! as §YAdvisor§! via decision! §YIku Nagae§! stats as §YAdmiral§! and §YGeneral§! will be further improved."
-hvr_iku_stats_improved_again_reward_tooltip: "With experience in three fields, such as managing the country, doing Naval Warfare and Ground Warfare, §YIku Nagae§! reaches completely mastery over Warfield, becoming §YOutstanding Admiral§! and §YExcellent General§!."
-=======
 hvr_won_iku_battles_tooltip: "Win at least §Y20§! (§Y[Root.hvr_won_iku_battles_counter.GetValue]§!/§Y20§!) ground or naval battles, with a unit, where §YIku Nagae§! is assigned as §YLeader§!."
 hvr_iku_as_advisor_reward_tooltip: "We can now recruit §YIku Nagae§! as §YAdvisor§! via decision! §YIku Nagae§! stats as §YAdmiral§! and §YGeneral§! will be further improved."
 hvr_iku_stats_improved_again_reward_tooltip: "With experience in three fields, such as managing the country, doing Naval Warfare and Ground Warfare, §YIku Nagae§! reaches completely mastery over Warfield, becoming §YOutstanding Admiral§! and §YExcellent General§!.\n\nWith our vast experience in Naval Batlles, from now on, our §YFlagships§! will be loaded with §YHeavy Cannons§!, improving their combat ability.\n"
->>>>>>> origin/Separate_tenshi_branch
 hvr_gods_and_humans_tooltip_reward: "We will gain §Yclaims§! on various places on Earth, where people believed in the §YOld Gods§! centuries ago."
 #New privileges for estates
 th_estate_heavenly_nobles_command_of_the_military: "Heavenly Nobles in Military Control"
@@ -799,12 +754,6 @@ th_estate_heavenly_zealots_desc: "No one expected them. But here they are, ready
 th_estate_grace_of_heavens: "Grace of Heavens"
 th_estate_grace_of_heavens_desc: "Heavens were always viewed as prestigious place in Gensokyo. Due to this, our brothers in faith will gladly make alliance with us. Perhaps they will even have a change to visit Heavens one day..."
 #COUNTRY
-<<<<<<< HEAD
-HVA: "Heavenly States of America"
-HVA_ADJ: "Heavenly"
-#missions:
-l_english:
-=======
 KNE: "Keepers of History"
 KNE_ADJ: "Hakutaku"
 KNE_ideas: "Hakutaku Ideas"
@@ -844,7 +793,6 @@ HVR_angel_of_apocalypse_desc: ""
  HVR_making_our_resort_even_better_title: "Making our Resort even Better!"
  HVR_making_our_resort_even_better_desc: ""
 
->>>>>>> origin/Separate_tenshi_branch
  HVR_ties_with_moon_title: "Our Ties with Moon"
  HVR_ties_with_moon_desc: ""
 
@@ -890,11 +838,7 @@ HVR_angel_of_apocalypse_desc: ""
  HVR_favor_for_a_friend_title: "Favor for a Friend"
  HVR_favor_for_a_friend_desc: ""
 
-<<<<<<< HEAD
- HVR_wrath_of_zeus_title: "Whath of Zeus"
-=======
  HVR_wrath_of_zeus_title: "Wrath of Zeus"
->>>>>>> origin/Separate_tenshi_branch
  HVR_wrath_of_zeus_desc: ""
 
  HVR_return_of_tenshi_title: "Return of Tenshi"
@@ -957,11 +901,7 @@ HVR_angel_of_apocalypse_desc: ""
  HVR_visit_old_hag_title: "Visit the Old Hag"
  HVR_visit_old_hag_desc: ""
 
-<<<<<<< HEAD
- HVR_show_old_hag_her_place_title: "Show the Old Hag her Place"
-=======
  HVR_show_old_hag_her_place_title: "Show Old Hag her Place"
->>>>>>> origin/Separate_tenshi_branch
  HVR_show_old_hag_her_place_desc: ""
 
  HVR_glory_of_odin_title: "Glory of Odin"

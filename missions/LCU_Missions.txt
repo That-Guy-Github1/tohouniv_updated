@@ -1845,55 +1845,45 @@ lcu_slot5_branch = {
 				province_id = 112
 			}
 			NOT = { owned_by = ROOT }
-			NOT = { culture = ROOT }
 			NOT = { religion = ROOT }
 		}
 
 		trigger = {
 			183 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				culture = ROOT
 			}
 			236 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				culture = ROOT
 			}
 			219 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				culture = ROOT
 			}
 			118 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				culture = ROOT
 			}
 			134 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				culture = ROOT
 			}	
 			50 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				culture = ROOT
 			}
 			266 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				culture = ROOT
 			}
 			45 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				culture = ROOT
 			}
 			112 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				culture = ROOT
 			}
 																									
 		}

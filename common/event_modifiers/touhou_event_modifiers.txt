@@ -1518,7 +1518,7 @@ lcu_hina_accepted = {			                 #Permanent
 
 lcu_europe_integration = {
 	diplomatic_reputation = 2                    #Permanent
-	diplomatic_upkeep = 1
+	diplomatic_upkeep = 2
 	
 }
 
@@ -1875,6 +1875,24 @@ hva_loyal_subject = {
 
 #Missions, will move it out of here later
 
+hvr_stairway_to_heaven_portal_modifier = {
+	local_friendly_movement_speed = 0.5
+	local_hostile_movement_speed = 0.5
+	province_trade_power_value = 10
+}
+
+hvr_stairway_to_heaven_portal_modifier_lvl_2 = {
+	local_friendly_movement_speed = 1
+	local_hostile_movement_speed = 1
+	province_trade_power_value = 25
+}
+
+hvr_stairway_to_heaven_portal_modifier_lvl_3 = {
+	local_friendly_movement_speed = 2
+	local_hostile_movement_speed = 2
+	province_trade_power_value = 50
+}
+
 hvr_keystones_modifier = {
 	movement_speed_in_fleet_modifier = 4
 }
@@ -2088,6 +2106,7 @@ lcu_purge_impurity_modifier = {
 
 lcu_iron_discipline_modifier = {
 	morale_damage_received = -0.1
+	discipline = 0.025
 }
 
 kmj_shadow_city_lvl_0 = {

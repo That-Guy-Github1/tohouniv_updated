@@ -1747,14 +1747,19 @@ hvr_slot3_branch = {
 		required_missions = { HVR_thunder_of_perun HVR_wrath_of_zeus HVR_glory_of_odin }
 		provinces_to_highlight = {  } 
 
-		trigger = { } 
+		trigger = {
+			236 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = { 
+		effect = {
+			custom_tooltip = hvr_stairway_to_heaven_ct 
 			hidden_effect = {
 				set_country_flag = hvr_stairway_to_heaven_flag
 				swap_non_generic_missions = yes
+				5032 = {set_province_flag = hvr_stairway_to_heaven_unlocked}
 			}
-			custom_tooltip = hvr_stairway_to_heaven_ct
 			add_country_modifier = {
 				name = hvr_stairway_to_heaven_modifier
 				duration = -1
@@ -2865,7 +2870,7 @@ hvr_stairway_to_heaven_branch = {
 					all_province = {
 						religion = ROOT
 					}
-					amount = 600
+					amount = 500
 				}
 			}
 		} 

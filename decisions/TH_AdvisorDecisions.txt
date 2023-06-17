@@ -1301,7 +1301,19 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			owns_or_non_sovereign_subject_of = 5320
+			OR = {
+				owns_or_non_sovereign_subject_of = 5320
+				AND = {
+					OR = {
+						alliance_with = LEM
+					}
+					reverse_has_opinion = {
+						who = LEM
+						value = 100
+					}
+				}
+			}
+
 			custom_trigger_tooltip = {
 				tooltip = hvr_yorihime_hired_for_thirty_years
 				NOT = {

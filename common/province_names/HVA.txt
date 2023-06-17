@@ -15,7 +15,7 @@
 915 = { "Peoria" "Peoria" }
 918 = { "Memphis" "Memphis" }
 921 = "Baton Rouge"
-925 = { "Fort Yorihime" "Fort Yorihim" }
+925 = { "Fort Yorihime" "Fort Yorihime" }
 929 = { "Savannah" "Savannah" }
 930 = "Gaines"
 931 = "Peachtree"
